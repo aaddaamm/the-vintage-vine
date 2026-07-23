@@ -229,12 +229,6 @@ export default function Home() {
           The Vintage Vine <span>Props &amp; Set Dressing</span>
         </a>
         <p>Distinctive finds for convincing worlds.</p>
-        <p className="siteCredit">
-          Site by{" "}
-          <a href="https://adamrobinson.tech" target="_blank" rel="noreferrer">
-            Adam Robinson
-          </a>
-        </p>
       </footer>
     </main>
   );

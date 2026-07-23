@@ -1048,7 +1048,7 @@ footer {
   display: grid;
   font-size: 10px;
   gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto;
   letter-spacing: 0.1em;
   padding: 34px clamp(24px, 5vw, 80px);
   text-transform: uppercase;
@@ -1073,16 +1073,7 @@ footer {
 
 footer > p {
   margin: 0;
-  text-align: center;
-}
-
-.siteCredit {
   text-align: right;
-}
-
-.siteCredit a {
-  border-bottom: 1px solid rgba(242, 234, 217, 0.45);
-  padding-bottom: 2px;
 }
 
 @media (max-width: 1050px) {
@@ -1251,8 +1242,7 @@ footer > p {
     padding: 35px 20px;
   }
 
-  footer > p,
-  .siteCredit {
+  footer > p {
     text-align: left;
   }
 }
