@@ -10,10 +10,10 @@ export default function Home() {
       <div className="poster">
         <Image
           className="posterArtwork"
-          src="/canva-original/homepage.jpg"
-          alt="The original Vintage Vine Canva website design by Niki Robinson, featuring classic cinema imagery, a pink ticket logo, vintage props, filmstrip frames, and contact information."
-          width={601}
-          height={2048}
+          src="/canva-original/homepage-final.webp"
+          alt="The Vintage Vine prop and set dressing collection, featuring classic cinema imagery, vintage objects, filmstrip frames, and contact information."
+          width={1800}
+          height={15124}
           priority
           unoptimized
         />
@@ -29,7 +29,6 @@ export default function Home() {
           aria-label="Email The Vintage Vine at TheVintageVinePVD@gmail.com"
         />
       </div>
-
     </main>
   );
 }
