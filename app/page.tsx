@@ -1,27 +1,33 @@
+import Image from "next/image";
+
 const services = [
   {
     number: "01",
     title: "Hero props",
     copy: "Distinctive objects with enough presence to hold the frame.",
-    icon: "lamp",
+    image: "/canva-assets/pee-wee-prop.jpg",
+    alt: "Pee-wee Herman character figure from The Vintage Vine collection",
   },
   {
     number: "02",
     title: "Set dressing",
     copy: "Layered, period-aware details that make a room feel truly lived in.",
-    icon: "chair",
+    image: "/canva-assets/vintage-kitchen-shelf.jpg",
+    alt: "Vintage kitchenware arranged on a wooden shelf",
   },
   {
     number: "03",
     title: "Specialty & large scale",
     copy: "Unusual statement pieces, oddities, and the things no one else has.",
-    icon: "vase",
+    image: "/canva-assets/pink-dollhouse.jpg",
+    alt: "Large pink and yellow vintage dollhouse",
   },
   {
     number: "04",
     title: "Wardrobe",
     copy: "Characterful clothing and accessories for every kind of story.",
-    icon: "hanger",
+    image: "/canva-assets/vintage-white-shoes.jpg",
+    alt: "Pair of white vintage shoes with floral trim",
   },
 ];
 
@@ -38,15 +44,6 @@ function MovieCamera() {
       <div className="cameraLens" />
       <div className="cameraLeg cameraLegOne" />
       <div className="cameraLeg cameraLegTwo" />
-    </div>
-  );
-}
-
-function PropIcon({ type }: { type: string }) {
-  return (
-    <div className={`propIcon propIcon-${type}`} aria-hidden="true">
-      <span />
-      <i />
     </div>
   );
 }
@@ -94,6 +91,16 @@ export default function Home() {
             <p>Cranston, RI</p>
           </div>
         </div>
+        <figure className="cinemaStrip">
+          <Image
+            src="/canva-assets/classic-cinema-collage.jpg"
+            alt="Collage of classic cinema stills featured in The Vintage Vine's original site"
+            fill
+            priority
+            sizes="(max-width: 640px) 100vw, 1130px"
+          />
+          <figcaption>Stories that still look the part</figcaption>
+        </figure>
         <div className="heroIntro">
           <p className="kicker">For film · television · theater · photography</p>
           <h2>
@@ -152,8 +159,13 @@ export default function Home() {
                 <Starburst />
               </div>
               <div className="propStage">
-                <PropIcon type={service.icon} />
-                <span className="photoNote">Your prop photography</span>
+                <Image
+                  src={service.image}
+                  alt={service.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 25vw"
+                />
+                <span className="photoNote">From Niki&apos;s collection</span>
               </div>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>

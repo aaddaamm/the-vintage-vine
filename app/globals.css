@@ -308,6 +308,45 @@ p {
   text-transform: uppercase;
 }
 
+.cinemaStrip {
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--pink);
+  height: clamp(135px, 19vw, 220px);
+  margin: 54px auto 0;
+  max-width: 1130px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cinemaStrip::after {
+  background: linear-gradient(90deg, rgba(37, 33, 34, .12), transparent 28%, transparent 72%, rgba(37, 33, 34, .18));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.cinemaStrip img {
+  filter: saturate(.72) contrast(1.06);
+  object-fit: cover;
+  object-position: center 48%;
+}
+
+.cinemaStrip figcaption {
+  background: var(--pink);
+  border-left: 2px solid var(--ink);
+  border-top: 2px solid var(--ink);
+  bottom: 0;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  padding: 9px 12px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
 .stars {
   height: 220px;
   position: relative;
@@ -539,15 +578,35 @@ p {
   position: relative;
 }
 
+.propStage::after {
+  border: 8px solid rgba(241, 185, 210, .72);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.propStage img {
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.serviceCard:hover .propStage img {
+  transform: scale(1.035);
+}
+
 .photoNote {
-  bottom: 8px;
+  background: var(--ink);
+  bottom: 10px;
+  color: var(--white);
   font-size: 8px;
   font-weight: 700;
   letter-spacing: .12em;
-  opacity: .55;
+  padding: 6px 7px;
   position: absolute;
-  right: 9px;
+  right: 10px;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .serviceCard h3 {
@@ -561,112 +620,6 @@ p {
   font-size: 13px;
   line-height: 1.5;
   margin: 0 6px 12px;
-}
-
-.propIcon {
-  height: 140px;
-  position: relative;
-  width: 145px;
-}
-
-.propIcon-lamp span {
-  background: var(--ink);
-  clip-path: polygon(25% 0,75% 0,100% 50%,0 50%);
-  height: 72px;
-  left: 33px;
-  position: absolute;
-  width: 80px;
-}
-.propIcon-lamp i {
-  background: var(--ink);
-  height: 64px;
-  left: 69px;
-  position: absolute;
-  top: 60px;
-  width: 7px;
-}
-.propIcon-lamp i::after {
-  background: var(--ink);
-  border-radius: 50%;
-  bottom: -8px;
-  content: "";
-  height: 17px;
-  left: -20px;
-  position: absolute;
-  width: 47px;
-}
-
-.propIcon-chair span {
-  border: 9px solid var(--ink);
-  border-radius: 40% 40% 5px 5px;
-  height: 86px;
-  left: 33px;
-  position: absolute;
-  top: 8px;
-  width: 80px;
-}
-.propIcon-chair i {
-  background: var(--ink);
-  height: 18px;
-  left: 24px;
-  position: absolute;
-  top: 83px;
-  width: 98px;
-}
-.propIcon-chair i::before,
-.propIcon-chair i::after {
-  background: var(--ink);
-  content: "";
-  height: 42px;
-  position: absolute;
-  top: 15px;
-  width: 9px;
-}
-.propIcon-chair i::before { left: 12px; transform: rotate(5deg); }
-.propIcon-chair i::after { right: 12px; transform: rotate(-5deg); }
-
-.propIcon-vase span {
-  background: var(--ink);
-  border-radius: 10% 10% 42% 42%;
-  clip-path: polygon(30% 0,70% 0,62% 24%,90% 44%,82% 100%,18% 100%,10% 44%,38% 24%);
-  height: 128px;
-  left: 26px;
-  position: absolute;
-  top: 5px;
-  width: 93px;
-}
-.propIcon-vase i { display: none; }
-
-.propIcon-hanger span {
-  border: 8px solid var(--ink);
-  border-radius: 50%;
-  border-bottom-color: transparent;
-  height: 42px;
-  left: 54px;
-  position: absolute;
-  top: 4px;
-  width: 38px;
-}
-.propIcon-hanger i {
-  border-bottom: 10px solid var(--ink);
-  border-left: 62px solid transparent;
-  border-right: 62px solid transparent;
-  height: 0;
-  left: 10px;
-  position: absolute;
-  top: 88px;
-  width: 0;
-}
-.propIcon-hanger i::after {
-  background: var(--ink);
-  content: "";
-  height: 78px;
-  left: -4px;
-  position: absolute;
-  top: -72px;
-  transform: rotate(38deg);
-  transform-origin: bottom;
-  width: 8px;
 }
 
 .collectionNote {
@@ -926,6 +879,12 @@ footer p:last-child a { border-bottom: 1px solid currentColor; }
   .heroIntro {
     grid-template-columns: 1fr;
     margin-top: 50px;
+  }
+
+  .cinemaStrip {
+    box-shadow: 5px 5px 0 var(--pink);
+    height: 165px;
+    margin-top: 38px;
   }
 
   .circleLink {
