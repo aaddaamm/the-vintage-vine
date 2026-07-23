@@ -1,17 +1,73 @@
+import Image from "next/image";
+
 const categories = [
-  { label: "Furniture", className: "furniture" },
-  { label: "Housewares", className: "housewares" },
-  { label: "Oddities", className: "oddities" },
-  { label: "Wardrobe", className: "wardrobe" },
-  { label: "Large scale", className: "largeScale" },
-  { label: "Period pieces", className: "period" },
+  {
+    label: "Furniture",
+    image: "/canva-assets/diamond-chair.png",
+    alt: "Black vintage chair with a colorful diamond-patterned seat",
+    position: "50% 62%",
+  },
+  {
+    label: "Housewares",
+    image: "/canva-assets/floral-crock-pot.jpg",
+    alt: "Vintage floral crock pot",
+    position: "50% 50%",
+  },
+  {
+    label: "Oddities",
+    image: "/canva-assets/peewee-doll.jpg",
+    alt: "Pee-wee Herman character doll",
+    position: "50% 42%",
+  },
+  {
+    label: "Wardrobe",
+    image: "/canva-assets/silver-necklace.jpg",
+    alt: "Vintage silver statement necklace",
+    position: "50% 35%",
+  },
+  {
+    label: "Large scale",
+    image: "/canva-assets/pink-dollhouse.jpg",
+    alt: "Large pink and yellow vintage dollhouse",
+    position: "50% 53%",
+  },
+  {
+    label: "Period pieces",
+    image: "/canva-assets/vintage-board-game.jpg",
+    alt: "Ornate vintage board game in warm colors",
+    position: "50% 50%",
+  },
 ];
 
 const featureFrames = [
-  { number: "01", title: "Hero pieces", className: "cabinet" },
-  { number: "02", title: "Period detail", className: "telephone" },
-  { number: "03", title: "Tabletop", className: "tabletop" },
-  { number: "04", title: "Wardrobe", className: "wardrobeRack" },
+  {
+    number: "01",
+    title: "Hero pieces",
+    image: "/canva-assets/card-catalog-cabinet.jpg",
+    alt: "Large wooden card-catalog cabinet with one drawer open",
+    position: "50% 54%",
+  },
+  {
+    number: "02",
+    title: "Period detail",
+    image: "/canva-assets/vintage-kitchenware.jpg",
+    alt: "Shelf of colorful vintage kitchenware and glassware",
+    position: "50% 50%",
+  },
+  {
+    number: "03",
+    title: "Industrial",
+    image: "/canva-assets/metal-floor-fan.jpg",
+    alt: "Large vintage metal floor fan",
+    position: "50% 48%",
+  },
+  {
+    number: "04",
+    title: "Statement pieces",
+    image: "/canva-assets/blue-rattan-table.jpg",
+    alt: "Blue painted vintage rattan side table",
+    position: "50% 48%",
+  },
 ];
 
 function Star({ className = "" }: { className?: string }) {
@@ -111,9 +167,14 @@ export default function Home() {
         <div className="categoryGrid">
           {categories.map((category, index) => (
             <article className="category" key={category.label}>
-              <div className={`categoryStill ${category.className}`} aria-hidden="true">
-                <span className="stillObject" />
-                <span className="stillShadow" />
+              <div className="categoryStill">
+                <Image
+                  src={category.image}
+                  alt={category.alt}
+                  fill
+                  sizes="(max-width: 700px) 42vw, (max-width: 980px) 28vw, 14vw"
+                  style={{ objectPosition: category.position }}
+                />
               </div>
               <p><span>0{index + 1}</span>{category.label}</p>
             </article>
@@ -132,9 +193,14 @@ export default function Home() {
           <div className="filmFrames">
             {featureFrames.map((frame) => (
               <article className="filmFrame" key={frame.number}>
-                <div className={`frameStill ${frame.className}`} aria-hidden="true">
-                  <span className="frameObject" />
-                  <span className="frameDetail" />
+                <div className="frameStill">
+                  <Image
+                    src={frame.image}
+                    alt={frame.alt}
+                    fill
+                    sizes="(max-width: 700px) 96vw, (max-width: 980px) 48vw, 25vw"
+                    style={{ objectPosition: frame.position }}
+                  />
                 </div>
                 <p><span>{frame.number}</span>{frame.title}</p>
               </article>

@@ -176,26 +176,10 @@ nav a:not(.headerCta):hover, nav a:not(.headerCta):focus-visible { border-color:
 .sectionTitle > p:last-child, .showroomHeading > p:last-child { font-family: Georgia, serif; font-size: 16px; line-height: 1.5; margin: 0; }
 .categoryGrid { display: grid; gap: 48px clamp(18px, 3vw, 42px); grid-template-columns: repeat(6, 1fr); }
 .categoryStill { background: var(--pink-light); border: 3px solid var(--ink); border-radius: 50%; box-shadow: 9px 9px 0 var(--ink); overflow: hidden; padding-top: 100%; position: relative; }
+.categoryStill img { object-fit: cover; transition: transform .2s ease; }
+.category:hover .categoryStill img { transform: scale(1.04); }
 .category p { align-items: center; display: flex; font-size: 11px; font-weight: 900; gap: 10px; letter-spacing: .08em; margin: 18px 0 0; text-transform: uppercase; }
 .category p span { color: #8b4565; font-family: Georgia, serif; font-size: 12px; }
-.stillShadow { background: rgba(38,35,37,.18); border-radius: 50%; bottom: 19%; height: 9%; left: 19%; position: absolute; transform: skew(-25deg); width: 68%; }
-.stillObject { bottom: 22%; left: 28%; position: absolute; z-index: 1; }
-.furniture .stillObject { background: #704833; border: 5px solid var(--ink); height: 42%; width: 47%; }
-.furniture .stillObject::before { background: #98684a; border: 3px solid var(--ink); content:""; inset: 17% 11%; position:absolute; }
-.furniture .stillObject::after { border-left: 5px solid var(--ink); border-right: 5px solid var(--ink); bottom:-28%; content:""; height:28%; left:8%; position:absolute; width:68%; }
-.housewares .stillObject { background: #9fbd9a; border: 5px solid var(--ink); border-radius: 8% 8% 42% 42%; height: 37%; width: 45%; }
-.housewares .stillObject::before { border: 5px solid var(--ink); border-left: 0; border-radius: 0 50% 50% 0; content:""; height:45%; position:absolute; right:-34%; top:11%; width:33%; }
-.housewares .stillObject::after { background: var(--orange); border-radius: 50%; content:""; height:12px; left:15%; position:absolute; top:35%; width:12px; }
-.oddities .stillObject { background: #e8c15d; border: 5px solid var(--ink); border-radius: 48% 48% 38% 38%; height: 51%; transform: rotate(-8deg); width: 38%; }
-.oddities .stillObject::before, .oddities .stillObject::after { background: #e8c15d; border: 4px solid var(--ink); border-radius: 50%; content:""; height:16px; position:absolute; top:-12px; width:16px; }
-.oddities .stillObject::before { left:4px; }.oddities .stillObject::after { right:4px; }
-.wardrobe .stillObject { border: 7px solid var(--ink); border-bottom: 0; border-radius: 50% 50% 0 0; height: 45%; width: 54%; }
-.wardrobe .stillObject::before { background: #b45f7f; border: 4px solid var(--ink); clip-path: polygon(50% 0, 100% 25%, 84% 100%, 16% 100%, 0 25%); content:""; height:80%; left:4%; position:absolute; top:22%; width:92%; }
-.largeScale .stillObject { background: #71939a; border: 5px solid var(--ink); height: 54%; left:22%; width:57%; }
-.largeScale .stillObject::before { background: repeating-linear-gradient(90deg, transparent 0 15%, var(--ink) 16% 20%); content:""; inset:15%; position:absolute; }
-.period .stillObject { background: #e5ceaa; border: 5px solid var(--ink); border-radius: 50%; height: 51%; left:23%; width:56%; }
-.period .stillObject::before { background: var(--ink); border-radius:50%; content:""; height:10px; left:calc(50% - 5px); position:absolute; top:calc(50% - 5px); width:10px; }
-.period .stillObject::after { border-left:3px solid var(--ink); border-top:3px solid var(--ink); content:""; height:25%; left:50%; position:absolute; top:25%; transform:rotate(12deg); transform-origin:bottom; width:16%; }
 
 .showroom { background: var(--pink-light); padding: 96px 0 0; }
 .showroomHeading { display: grid; gap: 25px; grid-template-columns: .65fr 1.55fr .8fr; padding: 0 clamp(20px, 5vw, 76px) 62px; }
@@ -205,20 +189,10 @@ nav a:not(.headerCta):hover, nav a:not(.headerCta):focus-visible { border-color:
 .filmFrames { display: grid; gap: 10px; grid-template-columns: repeat(4, 1fr); }
 .filmFrame { min-width: 0; }
 .frameStill { background: var(--pink); border: 2px solid var(--cream); height: clamp(250px, 32vw, 490px); overflow: hidden; position: relative; }
+.frameStill img { object-fit: cover; transition: filter .2s ease, transform .2s ease; }
+.filmFrame:hover .frameStill img { filter: saturate(1.08) contrast(1.04); transform: scale(1.015); }
 .filmFrame p { color: var(--cream); display: flex; font-size: 11px; font-weight: 900; justify-content: space-between; letter-spacing: .11em; margin: 10px 3px 0; text-transform: uppercase; }
 .filmFrame p span { color: var(--orange); }
-.frameObject { bottom:13%; left:18%; position:absolute; }
-.cabinet .frameObject { background:#65402d; border:6px solid var(--ink); height:64%; width:64%; }
-.cabinet .frameObject::before { background:repeating-linear-gradient(0deg,#785039 0 14%,#332c29 15% 18%); content:""; inset:7%; position:absolute; }
-.cabinet .frameDetail { background:#e4dcc7; border:3px solid var(--ink); bottom:19%; height:17%; left:38%; position:absolute; transform:rotate(-5deg); width:35%; }
-.telephone .frameObject { background:#e5d0a2; border:6px solid var(--ink); border-radius:48% 48% 35% 35%; height:43%; left:17%; width:65%; }
-.telephone .frameObject::before { border:10px solid var(--ink); border-left-width:22px; border-radius:50%; content:""; inset:13% 20%; position:absolute; }
-.telephone .frameDetail { background:var(--ink); border-radius:40%; bottom:57%; height:11%; left:12%; position:absolute; transform:rotate(-8deg); width:76%; }
-.tabletop .frameObject { background:#eee6ce; border:6px solid var(--ink); border-radius:50%; height:45%; width:64%; }
-.tabletop .frameObject::before { border:4px dotted #538c91; border-radius:50%; content:""; inset:14%; position:absolute; }
-.tabletop .frameDetail { background:#eee6ce; border:5px solid var(--ink); border-radius:6% 6% 42% 42%; bottom:12%; height:25%; left:38%; position:absolute; width:27%; }
-.wardrobeRack .frameObject { border-left:8px solid var(--ink); border-right:8px solid var(--ink); border-top:8px solid var(--ink); height:65%; width:65%; }
-.wardrobeRack .frameObject::before { background:repeating-linear-gradient(90deg,#8a4563 0 18%,#e5b44e 19% 37%,#607f81 38% 58%); clip-path:polygon(10% 0, 90% 0, 100% 100%, 0 100%); content:""; inset:14% 6% 0; position:absolute; }
 
 .contact { align-items: center; display: grid; gap: clamp(50px, 8vw, 130px); grid-template-columns: .9fr 1.1fr; padding: 125px clamp(22px, 6vw, 95px); }
 .contact h2 { font-size: clamp(44px, 5.6vw, 78px); max-width: 680px; }
@@ -290,5 +264,5 @@ footer p a { border-bottom:1px solid currentColor; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior:auto; }
-  .primaryButton { transition:none; }
+  .primaryButton, .categoryStill img, .frameStill img { transition:none; }
 }
