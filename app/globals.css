@@ -76,7 +76,7 @@ a {
   font-size: 11px;
   font-weight: 700;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: flex-end;
   letter-spacing: 0.06em;
   padding: 18px 20px;
   text-transform: uppercase;

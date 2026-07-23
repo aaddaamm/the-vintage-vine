@@ -31,7 +31,6 @@ export default function Home() {
       </div>
 
       <footer className="referenceFooter">
-        <span>Original Canva direction by Niki Robinson</span>
         <a
           href="https://adamrobinson.tech"
           target="_blank"
