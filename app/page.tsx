@@ -183,9 +183,9 @@ export default function Home() {
         <div className="contactDetails">
           <p>
             Need help tracking down something unusual?<br />
-            Tell Nikki what&apos;s on the call sheet.
+            Tell Niki what&apos;s on the call sheet.
           </p>
-          <strong>Nikki Robinson</strong>
+          <strong>Niki Robinson</strong>
           <a href="tel:4018302068">(401) 830-2068</a>
           <a href="mailto:TheVintageVinePVD@gmail.com">
             TheVintageVinePVD@gmail.com
