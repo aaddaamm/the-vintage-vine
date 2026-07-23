@@ -189,7 +189,7 @@ export default function Home() {
             <i /><i /><i /><i /><i />
           </div>
           <p>Lights. Camera. Action.</p>
-          <strong>Nikki Robinson</strong>
+          <strong>Niki Robinson</strong>
           <a href="tel:4018302068">(401) 830-2068</a>
           <a href="mailto:TheVintageVinePVD@gmail.com">
             TheVintageVinePVD@gmail.com
