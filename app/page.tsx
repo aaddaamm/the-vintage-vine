@@ -125,7 +125,7 @@ export default function Home() {
         <div className="showroomHeading">
           <p className="sectionCue">Featured finds / 003</p>
           <h2 id="showroom-heading">From the prop room</h2>
-          <p>Photo-ready spaces for Nikki&apos;s latest finds.</p>
+          <p>Photo-ready spaces for Niki&apos;s latest finds.</p>
         </div>
         <div className="filmstrip">
           <div className="perforations perforationsTop" aria-hidden="true" />
@@ -148,7 +148,7 @@ export default function Home() {
         <div className="contactIntro">
           <p className="sectionCue">Next production / 004</p>
           <h2>Have a vision in mind—or something unusual to track down?</h2>
-          <p>Tell Nikki what the scene needs. Let&apos;s make it feel real.</p>
+          <p>Tell Niki what the scene needs. Let&apos;s make it feel real.</p>
           <div className="actionWords" aria-hidden="true">
             <span>Lights.</span><span>Camera.</span><span>Action.</span>
           </div>
@@ -160,7 +160,7 @@ export default function Home() {
           </div>
           <div className="clapperBody">
             <p>Props &amp; Set Dressing</p>
-            <h3>Nikki Robinson</h3>
+            <h3>Niki Robinson</h3>
             <a href="tel:4018302068">(401) 830-2068</a>
             <a className="email" href="mailto:TheVintageVinePVD@gmail.com">
               TheVintageVinePVD@gmail.com
