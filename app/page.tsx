@@ -1,145 +1,244 @@
-const offerings = [
+import Image from "next/image";
+
+const categories = [
   {
-    number: "01",
-    title: "Specialty props",
-    description:
-      "Unusual, character-rich objects that give a scene history, texture, and a point of view.",
+    label: "Furniture",
+    image: "/canva-assets/diamond-chair.png",
+    alt: "Black vintage chair with a colorful diamond-patterned seat",
+    position: "50% 62%",
   },
   {
-    number: "02",
-    title: "Large-scale pieces",
-    description:
-      "Statement pieces and oversized finds for sets that need more than a finishing touch.",
+    label: "Housewares",
+    image: "/canva-assets/floral-crock-pot.jpg",
+    alt: "Vintage floral crock pot",
+    position: "50% 50%",
   },
   {
-    number: "03",
-    title: "Wardrobe & clothing",
-    description:
-      "Distinctive clothing and accessories chosen to make a character feel immediately believable.",
+    label: "Oddities",
+    image: "/canva-assets/peewee-doll.jpg",
+    alt: "Pee-wee Herman character doll",
+    position: "50% 42%",
   },
   {
-    number: "04",
-    title: "The hard-to-find",
-    description:
-      "Specific, strange, and seemingly impossible requests are where the real fun begins.",
+    label: "Wardrobe",
+    image: "/canva-assets/silver-necklace.jpg",
+    alt: "Vintage silver statement necklace",
+    position: "50% 35%",
+  },
+  {
+    label: "Large scale",
+    image: "/canva-assets/pink-dollhouse.jpg",
+    alt: "Large pink and yellow vintage dollhouse",
+    position: "50% 53%",
+  },
+  {
+    label: "Period pieces",
+    image: "/canva-assets/vintage-board-game.jpg",
+    alt: "Ornate vintage board game in warm colors",
+    position: "50% 50%",
   },
 ];
 
+const featureFrames = [
+  {
+    number: "01",
+    title: "Hero pieces",
+    image: "/canva-assets/card-catalog-cabinet.jpg",
+    alt: "Large wooden card-catalog cabinet with one drawer open",
+    position: "50% 54%",
+  },
+  {
+    number: "02",
+    title: "Period detail",
+    image: "/canva-assets/vintage-kitchenware.jpg",
+    alt: "Shelf of colorful vintage kitchenware and glassware",
+    position: "50% 50%",
+  },
+  {
+    number: "03",
+    title: "Industrial",
+    image: "/canva-assets/metal-floor-fan.jpg",
+    alt: "Large vintage metal floor fan",
+    position: "50% 48%",
+  },
+  {
+    number: "04",
+    title: "Statement pieces",
+    image: "/canva-assets/blue-rattan-table.jpg",
+    alt: "Blue painted vintage rattan side table",
+    position: "50% 48%",
+  },
+];
+
+function Star({ className = "" }: { className?: string }) {
+  return <span className={`star ${className}`} aria-hidden="true" />;
+}
+
 export default function Home() {
   return (
-    <main>
-      <nav className="nav" aria-label="Main navigation">
-        <a className="wordmark" href="#top" aria-label="The Vintage Vine home">
-          <span aria-hidden="true">V</span>
-          The Vintage Vine
+    <main id="top">
+      <header className="siteHeader">
+        <a className="miniMark" href="#top" aria-label="The Vintage Vine home">
+          <span>TVV</span>
+          <strong>Props &amp; Set Dressing</strong>
         </a>
-        <div className="navLinks">
-          <a href="#about">About</a>
-          <a href="#offerings">Offerings</a>
-          <a className="navCta" href="#contact">
-            Get in touch
+        <nav aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#showroom">Showroom</a>
+          <a className="headerCta" href="#contact">
+            Let&apos;s talk
+          </a>
+        </nav>
+      </header>
+
+      <section className="hero">
+        <div className="heroBackdrop" aria-hidden="true">
+          <div className="screen screenOne"><span>SET</span></div>
+          <div className="screen screenTwo"><span>PROP</span></div>
+          <div className="screen screenThree"><span>FOUND</span></div>
+        </div>
+
+        <div className="ticketWrap">
+          <div className="brandTicket">
+            <div className="ticketMain">
+              <div className="projectorPanel">
+                <p>Props &amp;<br />Set Dressing</p>
+                <div className="projector" aria-hidden="true">
+                  <span className="reel reelOne" />
+                  <span className="reel reelTwo" />
+                  <span className="cameraBody" />
+                  <span className="cameraLeg cameraLegOne" />
+                  <span className="cameraLeg cameraLegTwo" />
+                </div>
+              </div>
+              <div className="ticketName">
+                <span>The</span>
+                <strong>Vintage Vine</strong>
+              </div>
+              <a className="ticketPhone" href="tel:4018302068">
+                No. 401-830-2068
+              </a>
+            </div>
+            <div className="ticketStub">
+              <div className="starField" aria-hidden="true">
+                <Star className="starOne" />
+                <Star className="starTwo" />
+                <Star className="starThree" />
+                <Star className="starFour" />
+              </div>
+              <span>Cranston, RI</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="heroCopy">
+          <p className="kicker">For film · television · theater · photography</p>
+          <h1>
+            Perfect Props. Distinctive Details.
+            <span> Expert Sourcing. Camera Ready.</span>
+          </h1>
+          <a className="primaryButton" href="#contact">
+            Start a prop search <span aria-hidden="true">→</span>
           </a>
         </div>
-      </nav>
-
-      <section className="hero" id="top">
-        <div className="heroCopy">
-          <p className="eyebrow">Props · Set dressing · Wardrobe</p>
-          <h1>
-            The details make
-            <em> the world believable.</em>
-          </h1>
-          <p className="heroIntro">
-            Hard-to-find, unusual, and wonderfully specific pieces for film,
-            television, and every set with a story to tell.
-          </p>
-          <div className="heroActions">
-            <a className="button buttonPrimary" href="#contact">
-              Start a prop search
-            </a>
-            <a className="textLink" href="#about">
-              Our story <span aria-hidden="true">↘</span>
-            </a>
-          </div>
-        </div>
-
-        <div className="heroArt" aria-label="An eclectic arrangement of prop category cards">
-          <p className="catalogLabel">Available for the extraordinary</p>
-          <div className="propCard propCardOne">
-            <span>Oversized</span>
-            <strong>SET<br />PIECES</strong>
-            <small>Big presence required</small>
-          </div>
-          <div className="propCard propCardTwo">
-            <span>Wardrobe</span>
-            <strong>WORN<br />JUST RIGHT</strong>
-            <small>Character starts here</small>
-          </div>
-          <div className="propCard propCardThree">
-            <span>Oddities</span>
-            <strong>THE HARD<br />TO FIND</strong>
-            <small>Try us</small>
-          </div>
-          <p className="catalogNumber">Prop file<br />No. 001</p>
-        </div>
       </section>
 
-      <section className="intro" id="about">
-        <p className="sectionLabel">A note from the founder</p>
-        <div>
-          <h2>For worlds that need to feel lived in.</h2>
-          <p>
-            The Vintage Vine sources and curates props, set dressing, large-scale
-            pieces, specialty items, clothing, and the wonderfully unusual.
-            Every find is chosen to help production teams build authentic
-            spaces and believable characters—down to the last curious detail.
-          </p>
-        </div>
+      <section className="story" id="services">
+        <div className="filmEdge filmEdgeTop" aria-hidden="true" />
+        <p className="sectionCue">The story / 001</p>
+        <p className="storyLead">
+          Whether you need a single hero prop, period-accurate set dressing, or
+          an entire room filled with character, The Vintage Vine sources
+          distinctive vintage, antique, and contemporary pieces for film,
+          television, theater, photography, and commercial productions.
+        </p>
+        <p className="storyAside">
+          Looking for something unusual? <strong>We&apos;ll help you find it.</strong>
+        </p>
+        <div className="filmEdge filmEdgeBottom" aria-hidden="true" />
       </section>
 
-      <section className="offerings" id="offerings">
-        <div className="sectionHeading">
-          <p className="sectionLabel">What we offer</p>
-          <h2>Specific, storied,<br />and set-ready.</h2>
+      <section className="categorySection" aria-labelledby="category-heading">
+        <div className="sectionTitle">
+          <p className="sectionCue">Browse the collection / 002</p>
+          <h2 id="category-heading">A little bit of everything.</h2>
+          <p>Curated with character. Sourced with a sharp eye for authenticity.</p>
         </div>
-        <div className="offeringGrid">
-          {offerings.map((offering) => (
-            <article className="offering" key={offering.number}>
-              <span>{offering.number}</span>
-              <h3>{offering.title}</h3>
-              <p>{offering.description}</p>
+        <div className="categoryGrid">
+          {categories.map((category, index) => (
+            <article className="category" key={category.label}>
+              <div className="categoryStill">
+                <Image
+                  src={category.image}
+                  alt={category.alt}
+                  fill
+                  sizes="(max-width: 700px) 42vw, (max-width: 980px) 28vw, 14vw"
+                  style={{ objectPosition: category.position }}
+                />
+              </div>
+              <p><span>0{index + 1}</span>{category.label}</p>
             </article>
           ))}
         </div>
       </section>
 
+      <section className="showroom" id="showroom" aria-labelledby="showroom-heading">
+        <div className="showroomHeading">
+          <p className="sectionCue">Featured finds / 003</p>
+          <h2 id="showroom-heading">From the prop room</h2>
+          <p>Photo-ready spaces for Niki&apos;s latest finds.</p>
+        </div>
+        <div className="filmstrip">
+          <div className="perforations perforationsTop" aria-hidden="true" />
+          <div className="filmFrames">
+            {featureFrames.map((frame) => (
+              <article className="filmFrame" key={frame.number}>
+                <div className="frameStill">
+                  <Image
+                    src={frame.image}
+                    alt={frame.alt}
+                    fill
+                    sizes="(max-width: 700px) 96vw, (max-width: 980px) 48vw, 25vw"
+                    style={{ objectPosition: frame.position }}
+                  />
+                </div>
+                <p><span>{frame.number}</span>{frame.title}</p>
+              </article>
+            ))}
+          </div>
+          <div className="perforations perforationsBottom" aria-hidden="true" />
+        </div>
+      </section>
+
       <section className="contact" id="contact">
-        <p className="sectionLabel">Let&apos;s connect</p>
-        <h2>What are you hunting for?</h2>
-        <p>
-          Tell us about the production, the period, the character, or the one
-          impossible thing you still haven&apos;t found. We love a good search.
-        </p>
-        <span className="button buttonLight">Contact details coming soon</span>
+        <div className="contactIntro">
+          <p className="sectionCue">Next production / 004</p>
+          <h2>Have a vision in mind—or something unusual to track down?</h2>
+          <p>Tell Niki what the scene needs. Let&apos;s make it feel real.</p>
+          <div className="actionWords" aria-hidden="true">
+            <span>Lights.</span><span>Camera.</span><span>Action.</span>
+          </div>
+        </div>
+
+        <div className="clapper">
+          <div className="clapperTop" aria-hidden="true">
+            <span /><span /><span /><span /><span />
+          </div>
+          <div className="clapperBody">
+            <p>Props &amp; Set Dressing</p>
+            <h3>Niki Robinson</h3>
+            <a href="tel:4018302068">(401) 830-2068</a>
+            <a className="email" href="mailto:TheVintageVinePVD@gmail.com">
+              TheVintageVinePVD@gmail.com
+            </a>
+            <span>Cranston, Rhode Island</span>
+          </div>
+        </div>
       </section>
 
       <footer>
-        <a className="wordmark wordmarkFooter" href="#top">
-          <span aria-hidden="true">V</span>
-          The Vintage Vine
-        </a>
-        <p>
-          Site by{" "}
-          <a
-            className="developerLink"
-            href="https://adamrobinson.tech"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Adam Robinson
-          </a>
-        </p>
-        <p>© 2026 The Vintage Vine</p>
+        <p>© 2026 The Vintage Vine · Props &amp; Set Dressing</p>
+        <a href="#top">Back to top ↑</a>
       </footer>
     </main>
   );
