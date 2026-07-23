@@ -763,8 +763,6 @@ footer {
 
 .footerBrand strong { font-size: 14px; }
 footer p { margin: 0; }
-footer p:last-child { color: var(--white); }
-footer p:last-child a { border-bottom: 1px solid currentColor; }
 
 @media (max-width: 900px) {
   .heroTicket {

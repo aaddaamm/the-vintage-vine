@@ -212,12 +212,6 @@ export default function Home() {
           <strong>The Vintage Vine</strong>
         </a>
         <p>Props &amp; set dressing · Cranston, RI</p>
-        <p>
-          Site by{" "}
-          <a href="https://adamrobinson.tech" target="_blank" rel="noreferrer">
-            Adam Robinson
-          </a>
-        </p>
       </footer>
     </main>
   );
