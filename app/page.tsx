@@ -239,12 +239,6 @@ export default function Home() {
       <footer>
         <p>© 2026 The Vintage Vine · Props &amp; Set Dressing</p>
         <a href="#top">Back to top ↑</a>
-        <p>
-          Site by{" "}
-          <a href="https://adamrobinson.tech" target="_blank" rel="noreferrer">
-            Adam Robinson
-          </a>
-        </p>
       </footer>
     </main>
   );
