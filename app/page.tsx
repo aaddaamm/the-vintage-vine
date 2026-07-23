@@ -1,145 +1,214 @@
-const offerings = [
+const catalog = [
   {
-    number: "01",
-    title: "Specialty props",
-    description:
-      "Unusual, character-rich objects that give a scene history, texture, and a point of view.",
+    id: "A–01",
+    title: "Hero props",
+    note: "The one object the scene turns around.",
+    scene: "sceneCabinet",
   },
   {
-    number: "02",
-    title: "Large-scale pieces",
-    description:
-      "Statement pieces and oversized finds for sets that need more than a finishing touch.",
+    id: "B–17",
+    title: "Period pieces",
+    note: "Era-specific details, sourced with care.",
+    scene: "sceneTelephone",
   },
   {
-    number: "03",
-    title: "Wardrobe & clothing",
-    description:
-      "Distinctive clothing and accessories chosen to make a character feel immediately believable.",
+    id: "C–08",
+    title: "Set dressing",
+    note: "Character for corners, shelves, and whole rooms.",
+    scene: "sceneLamp",
   },
   {
-    number: "04",
-    title: "The hard-to-find",
-    description:
-      "Specific, strange, and seemingly impossible requests are where the real fun begins.",
+    id: "D–24",
+    title: "The unusual",
+    note: "Odd, oversized, elusive, and worth the search.",
+    scene: "sceneOddity",
   },
 ];
 
+function Starburst({ className = "" }: { className?: string }) {
+  return <span className={`starburst ${className}`} aria-hidden="true" />;
+}
+
 export default function Home() {
   return (
-    <main>
-      <nav className="nav" aria-label="Main navigation">
-        <a className="wordmark" href="#top" aria-label="The Vintage Vine home">
-          <span aria-hidden="true">V</span>
-          The Vintage Vine
+    <main id="top">
+      <header className="siteHeader">
+        <a className="miniMark" href="#top" aria-label="The Vintage Vine home">
+          <span className="miniReel" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </span>
+          <span>
+            The Vintage Vine
+            <small>Props &amp; Set Dressing</small>
+          </span>
         </a>
-        <div className="navLinks">
-          <a href="#about">About</a>
-          <a href="#offerings">Offerings</a>
-          <a className="navCta" href="#contact">
-            Get in touch
+        <nav aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#catalog">The archive</a>
+          <a className="headerContact" href="#contact">
+            Start a search
           </a>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
-      <section className="hero" id="top">
+      <section className="hero">
+        <div className="heroGrain" aria-hidden="true" />
         <div className="heroCopy">
-          <p className="eyebrow">Props · Set dressing · Wardrobe</p>
+          <p className="kicker">Props &amp; Set Dressing · Cranston, RI</p>
           <h1>
-            The details make
-            <em> the world believable.</em>
+            Perfect Props.
+            <span>Distinctive Details.</span>
           </h1>
+          <p className="heroTagline">Expert Sourcing. Camera Ready.</p>
           <p className="heroIntro">
-            Hard-to-find, unusual, and wonderfully specific pieces for film,
-            television, and every set with a story to tell.
+            Distinctive vintage, antique, and contemporary pieces for film,
+            television, theater, photography, and commercial productions.
           </p>
           <div className="heroActions">
-            <a className="button buttonPrimary" href="#contact">
-              Start a prop search
+            <a className="button buttonPink" href="#contact">
+              Tell us what you need
             </a>
-            <a className="textLink" href="#about">
-              Our story <span aria-hidden="true">↘</span>
+            <a className="quietLink" href="#catalog">
+              Browse the departments <span aria-hidden="true">↓</span>
             </a>
           </div>
         </div>
 
-        <div className="heroArt" aria-label="An eclectic arrangement of prop category cards">
-          <p className="catalogLabel">Available for the extraordinary</p>
-          <div className="propCard propCardOne">
-            <span>Oversized</span>
-            <strong>SET<br />PIECES</strong>
-            <small>Big presence required</small>
+        <div className="heroTicket" aria-label="The Vintage Vine calling card">
+          <div className="ticketLeft">
+            <div className="projector" aria-hidden="true">
+              <span className="reel reelOne"><i /><i /><i /></span>
+              <span className="reel reelTwo"><i /><i /><i /></span>
+              <span className="cameraBody" />
+              <span className="cameraLens" />
+              <span className="tripod tripodOne" />
+              <span className="tripod tripodTwo" />
+              <span className="lightBeam" />
+            </div>
+            <p>Props &amp;<br />Set Dressing</p>
+            <div className="ticketTitle">
+              <span>The</span>
+              <strong>Vintage Vine</strong>
+            </div>
+            <a href="tel:4018302068">No. 401–830–2068</a>
           </div>
-          <div className="propCard propCardTwo">
-            <span>Wardrobe</span>
-            <strong>WORN<br />JUST RIGHT</strong>
-            <small>Character starts here</small>
+          <div className="ticketRight">
+            <Starburst className="starOne" />
+            <Starburst className="starTwo" />
+            <Starburst className="starThree" />
+            <span className="diamond diamondOne" aria-hidden="true" />
+            <span className="diamond diamondTwo" aria-hidden="true" />
+            <strong>Cranston, RI</strong>
           </div>
-          <div className="propCard propCardThree">
-            <span>Oddities</span>
-            <strong>THE HARD<br />TO FIND</strong>
-            <small>Try us</small>
-          </div>
-          <p className="catalogNumber">Prop file<br />No. 001</p>
         </div>
+        <p className="frameCode frameCodeLeft">TVV / ROLL 01</p>
+        <p className="frameCode frameCodeRight">FRAME 401</p>
       </section>
 
-      <section className="intro" id="about">
-        <p className="sectionLabel">A note from the founder</p>
-        <div>
-          <h2>For worlds that need to feel lived in.</h2>
+      <div className="sprocketRule" aria-hidden="true">
+        {Array.from({ length: 14 }).map((_, index) => <i key={index} />)}
+      </div>
+
+      <section className="manifesto" id="services">
+        <div className="manifestoLabel">
+          <span>Production notes</span>
+          <strong>01</strong>
+        </div>
+        <div className="manifestoCopy">
+          <p className="sectionKicker">For the scene behind the scene</p>
+          <h2>
+            A good prop does more than fill space.
+            <em> It makes the story feel true.</em>
+          </h2>
           <p>
-            The Vintage Vine sources and curates props, set dressing, large-scale
-            pieces, specialty items, clothing, and the wonderfully unusual.
-            Every find is chosen to help production teams build authentic
-            spaces and believable characters—down to the last curious detail.
+            Whether you need a single hero prop, period-accurate set dressing,
+            or an entire room filled with character, The Vintage Vine sources
+            distinctive pieces with an eye for story, texture, and the telling
+            detail. Looking for something unusual? We&apos;ll help you find it.
           </p>
         </div>
       </section>
 
-      <section className="offerings" id="offerings">
-        <div className="sectionHeading">
-          <p className="sectionLabel">What we offer</p>
-          <h2>Specific, storied,<br />and set-ready.</h2>
+      <section className="catalog" id="catalog">
+        <div className="catalogHeading">
+          <div>
+            <p className="sectionKicker">Selected departments</p>
+            <h2>The curiosity archive</h2>
+          </div>
+          <p>
+            Large-scale pieces, specialty items, wardrobe, and hard-to-find
+            objects—sourced for the world you&apos;re building.
+          </p>
         </div>
-        <div className="offeringGrid">
-          {offerings.map((offering) => (
-            <article className="offering" key={offering.number}>
-              <span>{offering.number}</span>
-              <h3>{offering.title}</h3>
-              <p>{offering.description}</p>
-            </article>
-          ))}
+
+        <div className="filmStrip">
+          <div className="filmEdge filmEdgeTop" aria-hidden="true">
+            {Array.from({ length: 16 }).map((_, index) => <i key={index} />)}
+          </div>
+          <div className="filmFrames">
+            {catalog.map((item) => (
+              <article className="catalogCard" key={item.id}>
+                <div className={`propScene ${item.scene}`} aria-hidden="true">
+                  <span className="shape shapeOne" />
+                  <span className="shape shapeTwo" />
+                  <span className="shape shapeThree" />
+                </div>
+                <div className="catalogCardCopy">
+                  <span>{item.id}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.note}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="filmEdge filmEdgeBottom" aria-hidden="true">
+            {Array.from({ length: 16 }).map((_, index) => <i key={index} />)}
+          </div>
         </div>
+        <p className="catalogFootnote">
+          Inventory shown here is illustrative. Every production starts with a
+          fresh conversation and a very specific wish list.
+        </p>
       </section>
 
       <section className="contact" id="contact">
-        <p className="sectionLabel">Let&apos;s connect</p>
-        <h2>What are you hunting for?</h2>
-        <p>
-          Tell us about the production, the period, the character, or the one
-          impossible thing you still haven&apos;t found. We love a good search.
-        </p>
-        <span className="button buttonLight">Contact details coming soon</span>
+        <div className="contactStars" aria-hidden="true">
+          <Starburst className="contactStarOne" />
+          <Starburst className="contactStarTwo" />
+          <span className="diamond contactDiamond" />
+        </div>
+        <div className="contactIntro">
+          <p className="sectionKicker">Call sheet</p>
+          <h2>Have a vision in mind—or something impossible to find?</h2>
+          <p>Let&apos;s talk. The stranger the request, the better.</p>
+        </div>
+        <div className="contactSlate">
+          <div className="slateTop" aria-hidden="true">
+            <i /><i /><i /><i /><i />
+          </div>
+          <p>Lights. Camera. Action.</p>
+          <strong>Nikki Robinson</strong>
+          <a href="tel:4018302068">(401) 830-2068</a>
+          <a href="mailto:TheVintageVinePVD@gmail.com">
+            TheVintageVinePVD@gmail.com
+          </a>
+          <span>Cranston, Rhode Island</span>
+        </div>
       </section>
 
       <footer>
-        <a className="wordmark wordmarkFooter" href="#top">
-          <span aria-hidden="true">V</span>
-          The Vintage Vine
+        <a className="footerMark" href="#top">
+          The Vintage Vine <span>Props &amp; Set Dressing</span>
         </a>
-        <p>
+        <p>Distinctive finds for convincing worlds.</p>
+        <p className="siteCredit">
           Site by{" "}
-          <a
-            className="developerLink"
-            href="https://adamrobinson.tech"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://adamrobinson.tech" target="_blank" rel="noreferrer">
             Adam Robinson
           </a>
         </p>
-        <p>© 2026 The Vintage Vine</p>
       </footer>
     </main>
   );
