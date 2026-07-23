@@ -1,27 +1,37 @@
+import Image from "next/image";
+
 const catalog = [
   {
     id: "A–01",
     title: "Hero props",
     note: "The one object the scene turns around.",
-    scene: "sceneCabinet",
+    image: "/canva-assets/pee-wee-figure.jpg",
+    alt: "Vintage Pee-wee Herman figure in a gray suit and red bow tie",
+    position: "50% 38%",
   },
   {
     id: "B–17",
     title: "Period pieces",
     note: "Era-specific details, sourced with care.",
-    scene: "sceneTelephone",
+    image: "/canva-assets/vintage-kitchenware.jpg",
+    alt: "Shelf of vintage green glassware and patterned kitchenware",
+    position: "50% 50%",
   },
   {
     id: "C–08",
     title: "Set dressing",
     note: "Character for corners, shelves, and whole rooms.",
-    scene: "sceneLamp",
+    image: "/canva-assets/carved-wood-desk.jpg",
+    alt: "Large rustic desk assembled from carved wood panels",
+    position: "50% 50%",
   },
   {
     id: "D–24",
     title: "The unusual",
     note: "Odd, oversized, elusive, and worth the search.",
-    scene: "sceneOddity",
+    image: "/canva-assets/pink-vintage-dollhouse.jpg",
+    alt: "Large pink and cream vintage dollhouse",
+    position: "50% 50%",
   },
 ];
 
@@ -54,6 +64,15 @@ export default function Home() {
       </header>
 
       <section className="hero">
+        <div className="heroCinema" aria-hidden="true">
+          <Image
+            src="/canva-assets/classic-cinema-collage.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
         <div className="heroGrain" aria-hidden="true" />
         <div className="heroCopy">
           <p className="kicker">Props &amp; Set Dressing · Cranston, RI</p>
@@ -150,10 +169,17 @@ export default function Home() {
           <div className="filmFrames">
             {catalog.map((item) => (
               <article className="catalogCard" key={item.id}>
-                <div className={`propScene ${item.scene}`} aria-hidden="true">
-                  <span className="shape shapeOne" />
-                  <span className="shape shapeTwo" />
-                  <span className="shape shapeThree" />
+                <div className="propScene">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 720px) 100vw, (max-width: 1050px) 50vw, 25vw"
+                    style={{ objectPosition: item.position }}
+                  />
+                  <span className="frameNumber" aria-hidden="true">
+                    {item.id}
+                  </span>
                 </div>
                 <div className="catalogCardCopy">
                   <span>{item.id}</span>
