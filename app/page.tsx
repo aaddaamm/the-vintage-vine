@@ -30,15 +30,6 @@ export default function Home() {
         />
       </div>
 
-      <footer className="referenceFooter">
-        <a
-          href="https://adamrobinson.tech"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Site by Adam Robinson
-        </a>
-      </footer>
     </main>
   );
 }

@@ -68,25 +68,6 @@ a {
   width: 53%;
 }
 
-.referenceFooter {
-  align-items: center;
-  background: var(--ink);
-  color: var(--pink);
-  display: flex;
-  font-size: 11px;
-  font-weight: 700;
-  gap: 20px;
-  justify-content: flex-end;
-  letter-spacing: 0.06em;
-  padding: 18px 20px;
-  text-transform: uppercase;
-}
-
-.referenceFooter a {
-  border-bottom: 1px solid currentColor;
-  text-decoration: none;
-}
-
 .srOnly {
   height: 1px;
   margin: -1px;
@@ -96,16 +77,4 @@ a {
   width: 1px;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-}
-
-@media (max-width: 520px) {
-  body {
-    background: var(--pink);
-  }
-
-  .referenceFooter {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-  }
 }
