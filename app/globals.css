@@ -50,109 +50,17 @@ a {
   z-index: -1;
 }
 
-.heroTicket {
-  background: #e4b2ce;
-  border: clamp(1px, 0.15vw, 3px) solid var(--ink);
-  display: grid;
-  grid-template-columns: 68% 32%;
-  height: 39%;
-  left: 25%;
+.srOnly {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  top: 26%;
-  width: 52%;
-}
-
-.ticketMain {
-  display: grid;
-  grid-template-rows: 25% 7% 12% 31% 25%;
-  min-width: 0;
-}
-
-.ticketMain p,
-.ticketMain h1,
-.ticketMain a,
-.ticketStub p {
-  margin: 0;
-}
-
-.ticketService {
-  align-items: end;
-  display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(6px, 1.25vw, 22px);
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  padding: 0 4% 1%;
-  text-transform: uppercase;
-}
-
-.ticketRule {
-  border-bottom: clamp(1px, 0.13vw, 2px) solid var(--ink);
-  margin: 0 4%;
-}
-
-.ticketThe {
-  align-items: end;
-  display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(6px, 1.2vw, 21px);
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  padding: 0 4%;
-  text-transform: uppercase;
-}
-
-.ticketMain h1 {
-  align-items: center;
-  border-bottom: clamp(1px, 0.13vw, 2px) solid var(--ink);
-  display: flex;
-  font-size: clamp(14px, 3vw, 52px);
-  font-weight: 400;
-  letter-spacing: -0.035em;
-  line-height: 0.9;
-  padding: 0 4%;
-  text-transform: uppercase;
   white-space: nowrap;
-}
-
-.ticketMain a {
-  align-items: center;
-  display: flex;
-  font-size: clamp(9px, 2vw, 35px);
-  font-weight: 700;
-  justify-content: center;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.ticketStub {
-  border-left: clamp(1px, 0.15vw, 3px) solid var(--ink);
-  display: grid;
-  grid-template-rows: 1fr auto;
-  min-width: 0;
-  padding: 7% 5% 5%;
-}
-
-.ticketStars {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-}
-
-.ticketStars span {
-  font-size: clamp(12px, 3vw, 52px);
-}
-
-.ticketStars span:nth-child(2) {
-  font-size: clamp(18px, 4.5vw, 76px);
-}
-
-.ticketStub p {
-  font-size: clamp(7px, 1.5vw, 27px);
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  white-space: nowrap;
+  width: 1px;
 }
 
 .heroTagline {

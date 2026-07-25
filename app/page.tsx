@@ -55,22 +55,11 @@ export default function Home() {
           unoptimized
         />
 
-        <div className="heroTicket">
-          <div className="ticketMain">
-            <p className="ticketService">Props &amp; Set Dressing</p>
-            <div className="ticketRule" aria-hidden="true" />
-            <p className="ticketThe">The</p>
-            <h1>The Vintage Vine</h1>
-            <a href="tel:+14018302068">No. 401-830-2068</a>
-          </div>
-          <div className="ticketStub">
-            <div className="ticketStars" aria-hidden="true">
-              <span>✦</span>
-              <span>✦</span>
-              <span>✦</span>
-            </div>
-            <p>Cranston, RI</p>
-          </div>
+        <div className="srOnly">
+          <p>Props &amp; Set Dressing</p>
+          <h1>The Vintage Vine</h1>
+          <p>401-830-2068</p>
+          <p>Cranston, Rhode Island</p>
         </div>
 
         <p className="heroTagline">We find the right thing, right on cue</p>
