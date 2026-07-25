@@ -33,6 +33,7 @@ a {
 }
 
 .hero,
+.story,
 .collection,
 .gallery,
 .contact {
@@ -47,6 +48,111 @@ a {
   position: relative;
   width: 100%;
   z-index: -1;
+}
+
+.heroTicket {
+  background: #e4b2ce;
+  border: clamp(1px, 0.15vw, 3px) solid var(--ink);
+  display: grid;
+  grid-template-columns: 68% 32%;
+  height: 39%;
+  left: 25%;
+  position: absolute;
+  top: 26%;
+  width: 52%;
+}
+
+.ticketMain {
+  display: grid;
+  grid-template-rows: 25% 7% 12% 31% 25%;
+  min-width: 0;
+}
+
+.ticketMain p,
+.ticketMain h1,
+.ticketMain a,
+.ticketStub p {
+  margin: 0;
+}
+
+.ticketService {
+  align-items: end;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(6px, 1.25vw, 22px);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 0 4% 1%;
+  text-transform: uppercase;
+}
+
+.ticketRule {
+  border-bottom: clamp(1px, 0.13vw, 2px) solid var(--ink);
+  margin: 0 4%;
+}
+
+.ticketThe {
+  align-items: end;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(6px, 1.2vw, 21px);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  padding: 0 4%;
+  text-transform: uppercase;
+}
+
+.ticketMain h1 {
+  align-items: center;
+  border-bottom: clamp(1px, 0.13vw, 2px) solid var(--ink);
+  display: flex;
+  font-size: clamp(14px, 3vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  padding: 0 4%;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ticketMain a {
+  align-items: center;
+  display: flex;
+  font-size: clamp(9px, 2vw, 35px);
+  font-weight: 700;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ticketStub {
+  border-left: clamp(1px, 0.15vw, 3px) solid var(--ink);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-width: 0;
+  padding: 7% 5% 5%;
+}
+
+.ticketStars {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ticketStars span {
+  font-size: clamp(12px, 3vw, 52px);
+}
+
+.ticketStars span:nth-child(2) {
+  font-size: clamp(18px, 4.5vw, 76px);
+}
+
+.ticketStub p {
+  font-size: clamp(7px, 1.5vw, 27px);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .heroTagline {
@@ -111,7 +217,7 @@ a {
   z-index: 1;
 }
 
-.story h1 {
+.story h2 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(42px, 7.4vw, 110px);
@@ -135,7 +241,7 @@ a {
   max-width: 780px;
 }
 
-.needs h2 {
+.needs h3 {
   font-size: clamp(26px, 3.8vw, 58px);
   line-height: 1.05;
   margin: 0 0 clamp(18px, 2.5vw, 36px);
@@ -278,6 +384,7 @@ a {
   position: absolute;
   top: 0;
   width: 58%;
+  margin: 0;
 }
 
 .actionWords span {
@@ -311,12 +418,28 @@ a {
   text-decoration: none;
 }
 
-.contactDetails strong {
+.contactName {
   background: rgb(78 73 73 / 98%);
   color: white;
+  display: grid;
+  padding: 0.35em 1em;
+  text-align: center;
+}
+
+.contactName strong {
   font-size: clamp(30px, 7.7vw, 118px);
   font-weight: 400;
-  min-height: 1.35em;
+  line-height: 0.9;
+}
+
+.contactName span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(8px, 1.5vw, 24px);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-top: 0.3em;
+  text-transform: uppercase;
 }
 
 .contactDetails a[href^="tel"] {

@@ -3,32 +3,51 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.VERCEL_PROJECT_PRODUCTION_URL
-      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "http://localhost:3000",
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      "https://the-vintage-vine.vercel.app",
   ),
-  title: "The Vintage Vine",
+  title: "The Vintage Vine | Props & Set Dressing in Rhode Island",
   description:
-    "Hard-to-find props, set dressing, specialty pieces, and wardrobe for film and television.",
+    "Distinctive vintage, antique, contemporary, large-scale, and hard-to-find props and set dressing for film, television, photography, theater, and commercial productions.",
+  alternates: {
+    canonical: "/",
+  },
+  keywords: [
+    "props Rhode Island",
+    "set dressing Rhode Island",
+    "film props",
+    "television props",
+    "vintage prop sourcing",
+    "large-scale props",
+    "period-accurate set dressing",
+    "Cranston Rhode Island",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "The Vintage Vine",
-    description: "Curious things for convincing worlds.",
+    title: "The Vintage Vine | Props & Set Dressing",
+    description:
+      "Distinctive finds and hard-to-source details for convincing productions.",
     type: "website",
+    locale: "en_US",
+    siteName: "The Vintage Vine",
+    url: "/",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "The Vintage Vine — curious things for convincing worlds",
+        alt: "The Vintage Vine — props and set dressing in Cranston, Rhode Island",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Vintage Vine",
-    description: "Curious things for convincing worlds.",
+    title: "The Vintage Vine | Props & Set Dressing",
+    description:
+      "Distinctive finds and hard-to-source details for convincing productions.",
     images: ["/og.png"],
   },
   icons: {

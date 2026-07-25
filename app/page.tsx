@@ -1,8 +1,49 @@
 import Image from "next/image";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://the-vintage-vine.vercel.app";
+
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "The Vintage Vine",
+  url: siteUrl,
+  image: `${siteUrl}/canva-original/final-hero.webp`,
+  description:
+    "Prop sourcing and set dressing for film, television, photography, theater, and commercial productions.",
+  telephone: "+1-401-830-2068",
+  email: "TheVintageVinePVD@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Cranston",
+    addressRegion: "RI",
+    addressCountry: "US",
+  },
+  founder: {
+    "@type": "Person",
+    name: "Niki Robinson",
+  },
+  knowsAbout: [
+    "Prop sourcing",
+    "Set dressing",
+    "Large-scale props",
+    "Period-accurate props",
+    "Vintage objects",
+    "Antiques",
+    "Wardrobe",
+  ],
+};
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(businessSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <header className="hero" aria-label="The Vintage Vine">
         <Image
           className="sectionArtwork"
@@ -13,6 +54,25 @@ export default function Home() {
           priority
           unoptimized
         />
+
+        <div className="heroTicket">
+          <div className="ticketMain">
+            <p className="ticketService">Props &amp; Set Dressing</p>
+            <div className="ticketRule" aria-hidden="true" />
+            <p className="ticketThe">The</p>
+            <h1>The Vintage Vine</h1>
+            <a href="tel:+14018302068">No. 401-830-2068</a>
+          </div>
+          <div className="ticketStub">
+            <div className="ticketStars" aria-hidden="true">
+              <span>✦</span>
+              <span>✦</span>
+              <span>✦</span>
+            </div>
+            <p>Cranston, RI</p>
+          </div>
+        </div>
+
         <p className="heroTagline">We find the right thing, right on cue</p>
       </header>
 
@@ -26,11 +86,11 @@ export default function Home() {
         </div>
 
         <div className="storyInner">
-          <h1 id="story-title">Details tell the story.</h1>
+          <h2 id="story-title">Details tell the story.</h2>
           <p className="storyLead">We find the right ones.</p>
 
           <div className="needs">
-            <h2>Whether you need…</h2>
+            <h3>Whether you need…</h3>
             <ul>
               <li>a single large-scale prop</li>
               <li>period-accurate set dressing</li>
@@ -94,14 +154,17 @@ export default function Home() {
           unoptimized
         />
 
-        <div className="actionWords" id="contact-title">
+        <h2 className="actionWords" id="contact-title">
           <span>Lights.</span>
           <span>Camera.</span>
           <span>Action.</span>
-        </div>
+        </h2>
 
         <address className="contactDetails">
-          <strong>Niki Robinson</strong>
+          <div className="contactName">
+            <strong>Niki Robinson</strong>
+            <span>Cranston, Rhode Island</span>
+          </div>
           <a href="tel:+14018302068">401-830-2068</a>
           <a href="mailto:TheVintageVinePVD@gmail.com">
             TheVintageVinePVD@gmail.com
