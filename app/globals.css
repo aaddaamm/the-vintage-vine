@@ -1,10 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #242122;
-  --pink: #f2c9e7;
   --pink-light: #f9eaf4;
-  --cream: #f3f0dd;
 }
 
 * {
@@ -19,17 +16,13 @@ html {
 body {
   margin: 0;
   background: var(--pink-light);
-  color: var(--ink);
+  color: #242122;
   font-family: Georgia, "Times New Roman", serif;
 }
 
 main {
   overflow: clip;
   width: 100%;
-}
-
-a {
-  color: inherit;
 }
 
 .hero,
@@ -45,9 +38,7 @@ a {
 .sectionArtwork {
   display: block;
   height: auto;
-  position: relative;
   width: 100%;
-  z-index: -1;
 }
 
 .srOnly {
@@ -63,332 +54,28 @@ a {
   width: 1px;
 }
 
-.heroTagline {
-  align-items: center;
-  background: #050505;
-  bottom: 0;
-  color: white;
-  display: flex;
-  font-size: clamp(11px, 2.65vw, 48px);
-  font-weight: 900;
-  height: 10.7%;
-  justify-content: center;
-  left: 0;
-  letter-spacing: 0.02em;
-  margin: 0;
-  padding: 0 4%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.story,
-.galleryTitle {
-  background-color: var(--pink-light);
-  background-image:
-    radial-gradient(ellipse at 18% 24%, rgb(242 201 231 / 48%) 0 7%, transparent 8%),
-    radial-gradient(ellipse at 73% 18%, rgb(242 201 231 / 38%) 0 9%, transparent 10%),
-    radial-gradient(ellipse at 38% 78%, rgb(242 201 231 / 44%) 0 8%, transparent 9%),
-    radial-gradient(ellipse at 88% 72%, rgb(242 201 231 / 40%) 0 7%, transparent 8%);
-  background-size: 230px 190px;
-}
-
-.story {
-  min-height: min(76vw, 1100px);
-  overflow: hidden;
-  padding: clamp(42px, 7vw, 110px) clamp(22px, 7vw, 120px)
-    clamp(70px, 9vw, 140px);
-}
-
-.story::after {
-  background:
-    linear-gradient(var(--ink), var(--ink)) center / 100% 28% no-repeat,
-    repeating-linear-gradient(
-      90deg,
-      var(--ink) 0 4.5%,
-      transparent 4.5% 7.2%
-    );
-  bottom: 0;
-  content: "";
-  height: clamp(24px, 4vw, 64px);
-  left: 0;
-  opacity: 0.86;
-  position: absolute;
-  right: 0;
-}
-
-.storyInner {
-  margin: 0 auto;
-  max-width: 1180px;
-  position: relative;
-  z-index: 1;
-}
-
-.story h2 {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(42px, 7.4vw, 110px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.98;
-  margin: 0;
-  max-width: 920px;
-  -webkit-text-stroke: clamp(1px, 0.12vw, 2px) var(--ink);
-  text-wrap: balance;
-}
-
-.storyLead {
-  font-size: clamp(22px, 3.2vw, 48px);
-  font-weight: 800;
-  margin: clamp(10px, 1.5vw, 22px) 0 clamp(48px, 7vw, 100px);
-}
-
-.needs {
-  margin-left: auto;
-  max-width: 780px;
-}
-
-.needs h3 {
-  font-size: clamp(26px, 3.8vw, 58px);
-  line-height: 1.05;
-  margin: 0 0 clamp(18px, 2.5vw, 36px);
-}
-
-.needs ul {
-  display: grid;
-  font-size: clamp(17px, 2.1vw, 31px);
-  font-weight: 700;
-  gap: clamp(12px, 1.6vw, 24px);
-  margin: 0;
-  padding-left: 1.4em;
-}
-
-.storyBody {
-  font-size: clamp(19px, 2.4vw, 36px);
-  line-height: 1.35;
-  margin: clamp(50px, 7vw, 105px) 0 0;
-  max-width: 1000px;
-}
-
-.storyBody strong {
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
-}
-
-.filmReel {
-  border: clamp(18px, 3vw, 46px) solid rgb(198 145 174 / 24%);
-  border-radius: 50%;
-  height: min(56vw, 780px);
-  left: -8%;
-  position: absolute;
-  top: 6%;
-  transform: rotate(-18deg);
-  width: min(56vw, 780px);
-}
-
-.filmReel::before {
-  border: clamp(20px, 3vw, 50px) solid rgb(198 145 174 / 20%);
-  border-radius: 50%;
-  content: "";
-  inset: 22%;
-  position: absolute;
-}
-
-.filmReel span {
-  background: rgb(198 145 174 / 22%);
-  border-radius: 50%;
-  height: 22%;
-  left: 39%;
-  position: absolute;
-  top: 8%;
-  transform-origin: 50% 192%;
-  width: 22%;
-}
-
-.filmReel span:nth-child(2) {
-  transform: rotate(72deg);
-}
-
-.filmReel span:nth-child(3) {
-  transform: rotate(144deg);
-}
-
-.filmReel span:nth-child(4) {
-  transform: rotate(216deg);
-}
-
-.filmReel span:nth-child(5) {
-  transform: rotate(288deg);
-}
-
-.collectionCard {
-  background: var(--pink-light);
-  left: 0;
-  min-height: 60%;
-  padding: clamp(22px, 5vw, 86px) clamp(20px, 4vw, 68px);
-  position: absolute;
-  top: 11.1%;
-  width: 78.5%;
-}
-
-.eyebrow {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(9px, 1.5vw, 24px);
-  font-weight: 800;
-  letter-spacing: 0.24em;
-  margin: 0 0 clamp(20px, 4vw, 60px);
-  text-transform: uppercase;
-}
-
-.collectionCard h2 {
-  font-size: clamp(34px, 7vw, 110px);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.9;
-  margin: 0;
-}
-
-.collectionCard > p:last-child {
-  font-size: clamp(14px, 2.35vw, 37px);
-  line-height: 1.55;
-  margin: clamp(38px, 8vw, 120px) 0 0;
-  max-width: 900px;
-}
-
-.galleryTitle {
-  align-items: center;
-  display: flex;
-  height: 11.5%;
-  left: 0;
-  padding: 0 clamp(18px, 4vw, 70px);
-  position: absolute;
-  top: 0;
-  width: 58%;
-}
-
-.galleryTitle h2 {
-  color: white;
-  font-family: "Brush Script MT", "Segoe Script", cursive;
-  font-size: clamp(48px, 10vw, 160px);
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  text-shadow:
-    0 0 4px #c94ee7,
-    0 0 12px #d95ff2,
-    0 0 28px #e48bfa;
-  transform: rotate(-7deg);
-  -webkit-text-stroke: 1px #d863eb;
-}
-
-.actionWords {
-  align-content: center;
-  background: linear-gradient(90deg, #f7e6f1 0%, #fbf8f9 100%);
-  display: grid;
-  height: 42%;
-  left: 0;
-  padding: 2.5% 3%;
-  position: absolute;
-  top: 0;
-  width: 58%;
-  margin: 0;
-}
-
-.actionWords span {
-  color: white;
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(40px, 10.5vw, 165px);
-  font-weight: 800;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
-  -webkit-text-stroke: clamp(1px, 0.14vw, 2px) #555;
-}
-
-.contactDetails {
-  bottom: 0.8%;
-  display: grid;
-  font-style: normal;
-  gap: 1.4%;
+.contactHotspot {
+  border-radius: 0.25rem;
   left: 5%;
   position: absolute;
   right: 5%;
+  z-index: 1;
 }
 
-.contactDetails strong,
-.contactDetails a {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
+.contactHotspotPhone {
+  bottom: 8.5%;
+  height: 10%;
 }
 
-.contactName {
-  background: rgb(78 73 73 / 98%);
-  color: white;
-  display: grid;
-  padding: 0.35em 1em;
-  text-align: center;
+.contactHotspotEmail {
+  bottom: 1%;
+  height: 6.5%;
 }
 
-.contactName strong {
-  font-size: clamp(30px, 7.7vw, 118px);
-  font-weight: 400;
-  line-height: 0.9;
-}
-
-.contactName span {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(8px, 1.5vw, 24px);
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  margin-top: 0.3em;
-  text-transform: uppercase;
-}
-
-.contactDetails a[href^="tel"] {
-  background: rgb(5 5 5 / 98%);
-  color: white;
-  font-size: clamp(34px, 9vw, 138px);
-  min-height: 1.25em;
-}
-
-.contactDetails a[href^="mailto"] {
-  background: rgb(76 72 72 / 98%);
-  color: white;
-  font-size: clamp(15px, 4.4vw, 68px);
-  font-weight: 700;
-  min-height: 1.55em;
-  overflow-wrap: anywhere;
-}
-
-.contactDetails a:focus-visible {
-  outline: 4px solid var(--pink);
-  outline-offset: 4px;
-}
-
-@media (max-width: 700px) {
-  .story {
-    min-height: 0;
-    padding-bottom: 78px;
-  }
-
-  .needs {
-    margin-left: 0;
-  }
-
-  .collectionCard {
-    min-height: 61%;
-    width: 80%;
-  }
-
-  .collectionCard > p:last-child {
-    line-height: 1.35;
-  }
+.contactHotspot:focus-visible {
+  background: rgb(242 201 231 / 18%);
+  outline: 3px solid white;
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
