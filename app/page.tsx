@@ -73,7 +73,7 @@ export default function Home() {
           <p>Cranston, RI</p>
         </div>
 
-        <p className="absolute inset-x-0 bottom-0 m-0 flex h-[10.7%] items-center justify-center bg-[#050505] px-[4%] text-center font-['Fraunces',Garamond,Georgia,serif] text-[3cqw] font-bold tracking-[0.015em] text-white uppercase">
+        <p className="absolute inset-x-0 bottom-0 m-0 flex h-[10.7%] items-center justify-center bg-[#050505] px-[4%] text-center font-['Fraunces',Garamond,Georgia,serif] text-[3cqw] font-black tracking-[0.015em] text-white uppercase">
           We find the right thing, right on cue
         </p>
       </header>
@@ -117,12 +117,12 @@ export default function Home() {
             <br />
             tell the story.
           </h2>
-          <p className="absolute top-[20.5%] left-[9%] m-0 text-[7cqw] font-bold">
+          <p className="absolute top-[20.5%] left-[9%] m-0 text-[7cqw] font-black">
             We find the right ones.
           </p>
 
           <div className="absolute top-[38.5%] right-[3%] left-[2%]">
-            <h3 className="m-0 mb-[8%] text-[9cqw] leading-none">
+            <h3 className="m-0 mb-[8%] text-[9cqw] leading-none font-bold">
               Whether you need…
             </h3>
             <ul className="ml-[23%] grid list-disc gap-[6cqw] pl-[1.2em] text-[4.6cqw] leading-[1.15] font-bold">
@@ -198,7 +198,7 @@ export default function Home() {
         />
         <div className="absolute top-0 left-0 flex h-[11.5%] w-[58%] items-center bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-[length:170px_145px,210px_175px,190px_165px,155px_135px] px-[4%]">
           <h2
-            className="m-0 rotate-[-7deg] font-['Brush_Script_MT','Segoe_Script',cursive] text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb]"
+            className="m-0 rotate-[-7deg] font-['Sacramento',cursive] text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb]"
             id="gallery-title"
           >
             Gallery
@@ -240,17 +240,17 @@ export default function Home() {
         />
 
         <address className="absolute top-[70%] right-[5%] bottom-[0.8%] left-[5%] z-[3] grid grid-rows-[32%_40%_28%] gap-0 not-italic">
-          <strong className="flex min-h-[1.2em] items-center justify-center bg-[#4e4949] text-center text-[12cqw] leading-none font-normal text-white no-underline">
+          <strong className="flex min-h-[1.2em] items-center justify-center bg-[#4e4949] text-center text-[12cqw] leading-none font-black text-white no-underline [font-variation-settings:'SOFT'_100,'WONK'_1]">
             Niki Robinson
           </strong>
           <a
-            className="flex min-h-[1.28em] items-center justify-center bg-[#050505] text-center text-[12.2cqw] leading-none text-white no-underline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7]"
+            className="flex min-h-[1.28em] items-center justify-center bg-[#050505] text-center text-[12.2cqw] leading-none font-light text-white no-underline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7]"
             href="tel:+14018302068"
           >
             401-830-2068
           </a>
           <a
-            className="flex min-h-[1.55em] items-center justify-center bg-[#4c4848] text-center text-[5cqw] leading-none font-bold text-white no-underline [overflow-wrap:anywhere] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7]"
+            className="flex min-h-[1.55em] items-center justify-center bg-[#4c4848] text-center text-[5cqw] leading-none font-black text-white no-underline [font-variation-settings:'SOFT'_100,'WONK'_1] [overflow-wrap:anywhere] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7]"
             href="mailto:TheVintageVinePVD@gmail.com"
           >
             TheVintageVinePVD@gmail.com
