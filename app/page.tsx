@@ -245,7 +245,7 @@ export default function Home() {
         />
 
         <h2
-          className="absolute top-0 left-0 z-[1] m-0 grid h-[42%] w-[58%] content-center bg-linear-to-r from-[#f7e6f1] to-[#fbf8f9] px-[3%] py-[2.5%]"
+          className="absolute top-0 left-0 z-[1] m-0 grid h-[40%] w-[58%] content-center bg-linear-to-r from-[#f7e6f1] to-[#fbf8f9] px-[3%] py-[2.5%]"
           id="contact-title"
         >
           {["Lights.", "Camera.", "Action."].map((word) => (
@@ -259,7 +259,7 @@ export default function Home() {
         </h2>
 
         <div
-          className="pointer-events-none absolute inset-0 z-[2] bg-[url('/canva-original/final-contact.webp')] bg-[length:100%_100%] bg-center bg-no-repeat [clip-path:polygon(0_45%,100%_30%,100%_100%,0_100%)]"
+          className="pointer-events-none absolute inset-0 z-[2] bg-[url('/canva-original/final-contact.webp')] bg-[length:100%_100%] bg-center bg-no-repeat [clip-path:polygon(0_49%,100%_34%,100%_100%,0_100%)]"
           aria-hidden="true"
         />
 
