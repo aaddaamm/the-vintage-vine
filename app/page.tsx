@@ -60,23 +60,26 @@ export default function Home() {
           <h1>The Vintage Vine</h1>
           <p>No. 401-830-2068</p>
           <p>Cranston, RI</p>
-          <p>We find the right thing, right on cue.</p>
         </div>
+
+        <p className="heroTagline">We find the right thing, right on cue</p>
       </header>
 
       <section className="story" aria-labelledby="story-title">
-        <Image
-          className="sectionArtwork"
-          src="/canva-original/final-story.webp"
-          alt=""
-          width={1800}
-          height={3130}
-          loading="eager"
-          unoptimized
-        />
+        <div className="filmReel" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
 
-        <div className="srOnly">
-          <h2 id="story-title">Details tell the story.</h2>
+        <div className="storyInner">
+          <h2 id="story-title">
+            Details
+            <br />
+            tell the story.
+          </h2>
           <p className="storyLead">We find the right ones.</p>
 
           <div className="needs">
@@ -106,7 +109,7 @@ export default function Home() {
           height={1958}
           unoptimized
         />
-        <div className="srOnly">
+        <div className="collectionCard">
           <p className="eyebrow">The collection</p>
           <h2 id="collection-title">
             Plenty of character.
@@ -129,12 +132,12 @@ export default function Home() {
           height={6399}
           unoptimized
         />
-        <div className="srOnly">
+        <div className="galleryTitle">
           <h2 id="gallery-title">Gallery</h2>
         </div>
       </section>
 
-      <section className="contact" aria-labelledby="contact-title">
+      <section className="contact" id="contact" aria-labelledby="contact-title">
         <Image
           className="sectionArtwork"
           src="/canva-original/final-contact.webp"
@@ -144,25 +147,19 @@ export default function Home() {
           unoptimized
         />
 
-        <div className="srOnly">
-          <h2 id="contact-title">Lights. Camera. Action.</h2>
-          <address>
-            <p>Niki Robinson</p>
-            <p>401-830-2068</p>
-            <p>TheVintageVinePVD@gmail.com</p>
-          </address>
-        </div>
+        <h2 className="actionWords" id="contact-title">
+          <span>Lights.</span>
+          <span>Camera.</span>
+          <span>Action.</span>
+        </h2>
 
-        <a
-          className="contactHotspot contactHotspotPhone"
-          href="tel:+14018302068"
-          aria-label="Call Niki Robinson at 401-830-2068"
-        />
-        <a
-          className="contactHotspot contactHotspotEmail"
-          href="mailto:TheVintageVinePVD@gmail.com"
-          aria-label="Email The Vintage Vine"
-        />
+        <address className="contactDetails">
+          <strong>Niki Robinson</strong>
+          <a href="tel:+14018302068">401-830-2068</a>
+          <a href="mailto:TheVintageVinePVD@gmail.com">
+            TheVintageVinePVD@gmail.com
+          </a>
+        </address>
       </section>
     </main>
   );

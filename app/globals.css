@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Limelight&display=swap");
 @import "tailwindcss";
 
 :root {
+  --ink: #242122;
+  --pink: #f2c9e7;
   --pink-light: #f9eaf4;
 }
 
@@ -16,13 +19,17 @@ html {
 body {
   margin: 0;
   background: var(--pink-light);
-  color: #242122;
-  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  font-family: "Fraunces", Garamond, Georgia, serif;
 }
 
 main {
   overflow: clip;
   width: 100%;
+}
+
+a {
+  color: inherit;
 }
 
 .hero,
@@ -38,7 +45,9 @@ main {
 .sectionArtwork {
   display: block;
   height: auto;
+  position: relative;
   width: 100%;
+  z-index: -1;
 }
 
 .srOnly {
@@ -54,28 +63,316 @@ main {
   width: 1px;
 }
 
-.contactHotspot {
-  border-radius: 0.25rem;
-  left: 5%;
+.heroTagline {
+  align-items: center;
+  background: #050505;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-family: "Fraunces", Garamond, Georgia, serif;
+  font-size: clamp(11px, 2.65vw, 48px);
+  font-weight: 700;
+  height: 10.7%;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 0.015em;
+  margin: 0;
+  padding: 0 4%;
   position: absolute;
-  right: 5%;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.story,
+.galleryTitle {
+  background-color: var(--pink-light);
+  background-image:
+    radial-gradient(ellipse at 18% 24%, rgb(242 201 231 / 48%) 0 7%, transparent 8%),
+    radial-gradient(ellipse at 73% 18%, rgb(242 201 231 / 38%) 0 9%, transparent 10%),
+    radial-gradient(ellipse at 38% 78%, rgb(242 201 231 / 44%) 0 8%, transparent 9%),
+    radial-gradient(ellipse at 88% 72%, rgb(242 201 231 / 40%) 0 7%, transparent 8%);
+  background-size: 230px 190px;
+}
+
+.story {
+  aspect-ratio: 1800 / 3130;
+  overflow: hidden;
+}
+
+.story::after {
+  background:
+    linear-gradient(rgb(255 255 255 / 62%), rgb(255 255 255 / 62%)) center / 100% 48% no-repeat,
+    repeating-linear-gradient(
+      90deg,
+      rgb(242 201 231 / 55%) 0 5.5%,
+      transparent 5.5% 9%
+    );
+  content: "";
+  height: 7%;
+  left: 0;
+  opacity: 0.9;
+  position: absolute;
+  right: 0;
+  top: 71.5%;
+}
+
+.storyInner {
+  inset: 0;
+  position: absolute;
   z-index: 1;
 }
 
-.contactHotspotPhone {
-  bottom: 8.5%;
-  height: 10%;
+.story h2 {
+  color: white;
+  font-family: Broadway, "Limelight", sans-serif;
+  font-size: clamp(34px, 8.8vw, 158px);
+  font-weight: 400;
+  left: 2%;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  margin: 0;
+  position: absolute;
+  top: 3%;
+  -webkit-text-stroke: clamp(1px, 0.13vw, 2px) var(--ink);
 }
 
-.contactHotspotEmail {
-  bottom: 1%;
-  height: 6.5%;
+.storyLead {
+  font-size: clamp(17px, 4vw, 72px);
+  font-weight: 700;
+  left: 9%;
+  margin: 0;
+  position: absolute;
+  top: 19.5%;
 }
 
-.contactHotspot:focus-visible {
-  background: rgb(242 201 231 / 18%);
-  outline: 3px solid white;
-  outline-offset: 3px;
+.needs {
+  left: 2%;
+  position: absolute;
+  right: 3%;
+  top: 38%;
+}
+
+.needs h3 {
+  font-size: clamp(20px, 4.4vw, 79px);
+  line-height: 1;
+  margin: 0 0 5%;
+}
+
+.needs ul {
+  display: grid;
+  font-size: clamp(14px, 3.05vw, 55px);
+  font-weight: 700;
+  gap: 2.6vw;
+  line-height: 1.15;
+  margin: 0 0 0 23%;
+  padding-left: 1.2em;
+}
+
+.storyBody {
+  font-size: clamp(15px, 3.05vw, 55px);
+  left: 5%;
+  line-height: 1.35;
+  margin: 0;
+  position: absolute;
+  right: 5%;
+  text-align: justify;
+  top: 79.5%;
+}
+
+.storyBody strong {
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+}
+
+.filmReel {
+  border: clamp(14px, 2.5vw, 44px) solid rgb(198 145 174 / 22%);
+  border-radius: 50%;
+  height: 43%;
+  left: -15%;
+  position: absolute;
+  top: 1%;
+  transform: rotate(-18deg);
+  width: 74%;
+}
+
+.filmReel::before {
+  border: clamp(16px, 2.6vw, 46px) solid rgb(198 145 174 / 18%);
+  border-radius: 50%;
+  content: "";
+  inset: 22%;
+  position: absolute;
+}
+
+.filmReel span {
+  background: rgb(198 145 174 / 20%);
+  border-radius: 50%;
+  height: 22%;
+  left: 39%;
+  position: absolute;
+  top: 8%;
+  transform-origin: 50% 192%;
+  width: 22%;
+}
+
+.filmReel span:nth-child(2) {
+  transform: rotate(72deg);
+}
+
+.filmReel span:nth-child(3) {
+  transform: rotate(144deg);
+}
+
+.filmReel span:nth-child(4) {
+  transform: rotate(216deg);
+}
+
+.filmReel span:nth-child(5) {
+  transform: rotate(288deg);
+}
+
+.collectionCard {
+  background: #fcecf7;
+  left: 0;
+  min-height: 59%;
+  padding: 5% 3.5%;
+  position: absolute;
+  top: 11%;
+  width: 78.5%;
+}
+
+.collectionCard::after {
+  color: #d95e9b;
+  content: "✦  ✦";
+  font-size: clamp(28px, 7vw, 112px);
+  line-height: 1;
+  position: absolute;
+  right: 3%;
+  top: 62%;
+}
+
+.eyebrow {
+  font-family: "Arimo", Arial, sans-serif;
+  font-size: clamp(8px, 1.45vw, 26px);
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  margin: 0 0 4%;
+  text-transform: uppercase;
+}
+
+.collectionCard h2 {
+  font-size: clamp(31px, 6.8vw, 122px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.collectionCard > p:last-child {
+  font-size: clamp(13px, 2.3vw, 41px);
+  line-height: 1.5;
+  margin: 11% 21% 0 0;
+}
+
+.galleryTitle {
+  align-items: center;
+  display: flex;
+  height: 11.5%;
+  left: 0;
+  padding: 0 4%;
+  position: absolute;
+  top: 0;
+  width: 58%;
+}
+
+.galleryTitle h2 {
+  color: white;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(48px, 10vw, 180px);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  text-shadow:
+    0 0 4px #c94ee7,
+    0 0 12px #d95ff2,
+    0 0 28px #e48bfa;
+  transform: rotate(-7deg);
+  -webkit-text-stroke: 1px #d863eb;
+}
+
+.actionWords {
+  align-content: center;
+  background: linear-gradient(90deg, #f7e6f1 0%, #fbf8f9 100%);
+  display: grid;
+  height: 42%;
+  left: 0;
+  margin: 0;
+  padding: 2.5% 3%;
+  position: absolute;
+  top: 0;
+  width: 58%;
+}
+
+.actionWords span {
+  color: white;
+  display: block;
+  font-family: Broadway, "Limelight", sans-serif;
+  font-size: clamp(37px, 10.2vw, 184px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  -webkit-text-stroke: clamp(1px, 0.14vw, 2px) #555;
+}
+
+.contactDetails {
+  bottom: 0.8%;
+  display: grid;
+  font-style: normal;
+  gap: 0;
+  grid-template-rows: 32% 40% 28%;
+  left: 5%;
+  position: absolute;
+  right: 5%;
+  top: 70%;
+}
+
+.contactDetails strong,
+.contactDetails a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contactDetails strong {
+  background: #4e4949;
+  color: white;
+  font-size: clamp(29px, 7.5vw, 135px);
+  font-weight: 400;
+  min-height: 1.2em;
+}
+
+.contactDetails a[href^="tel"] {
+  background: #050505;
+  color: white;
+  font-size: clamp(33px, 8.8vw, 158px);
+  min-height: 1.28em;
+}
+
+.contactDetails a[href^="mailto"] {
+  background: #4c4848;
+  color: white;
+  font-size: clamp(14px, 4.25vw, 76px);
+  font-weight: 700;
+  min-height: 1.55em;
+  overflow-wrap: anywhere;
+}
+
+.contactDetails a:focus-visible {
+  outline: 4px solid var(--pink);
+  outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
