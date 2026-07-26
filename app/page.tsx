@@ -44,7 +44,7 @@ const reelRotations = [
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-[1440px] overflow-clip [container-type:inline-size]">
+    <main className="mx-auto w-full max-w-[1100px] overflow-clip [container-type:inline-size]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
