@@ -250,7 +250,9 @@ export default function Home() {
         >
           {["Lights.", "Camera.", "Action."].map((word) => (
             <span
-              className="block font-[family-name:var(--font-limelight)] text-[17cqw] leading-[0.98] font-normal tracking-[-0.055em] text-white [-webkit-text-stroke:clamp(1px,0.14cqw,2px)_#555]"
+              className={`block font-[family-name:var(--font-limelight)] leading-[0.98] font-normal tracking-[-0.055em] text-white [-webkit-text-stroke:clamp(1px,0.14cqw,2px)_#555] ${
+                word === "Action." ? "text-[16cqw]" : "text-[17cqw]"
+              }`}
               key={word}
             >
               {word}
