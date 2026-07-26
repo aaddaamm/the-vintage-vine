@@ -1,54 +1,72 @@
 import type { Metadata } from "next";
+import { Arimo, Fraunces, Limelight, Sacramento } from "next/font/google";
+import {
+  serviceArea,
+  siteDescription,
+  siteName,
+  siteUrl,
+} from "./site";
 import "./globals.css";
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-fraunces",
+  axes: ["SOFT", "WONK", "opsz"],
+});
+
+const arimo = Arimo({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-arimo",
+});
+
+const limelight = Limelight({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-limelight",
+  weight: "400",
+});
+
+const sacramento = Sacramento({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sacramento",
+  weight: "400",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ??
-      "https://the-vintage-vine.vercel.app",
-  ),
+  metadataBase: new URL(siteUrl),
   title: "The Vintage Vine | Props & Set Dressing in Rhode Island",
-  description:
-    "Distinctive vintage, antique, contemporary, large-scale, and hard-to-find props and set dressing for film, television, photography, theater, and commercial productions.",
+  description: siteDescription,
   alternates: {
     canonical: "/",
   },
-  keywords: [
-    "props Rhode Island",
-    "set dressing Rhode Island",
-    "film props",
-    "television props",
-    "vintage prop sourcing",
-    "large-scale props",
-    "period-accurate set dressing",
-    "Cranston Rhode Island",
-  ],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "The Vintage Vine | Props & Set Dressing",
-    description:
-      "Distinctive finds and hard-to-source details for convincing productions.",
+    title: `${siteName} | Props & Set Dressing`,
+    description: siteDescription,
     type: "website",
     locale: "en_US",
-    siteName: "The Vintage Vine",
+    siteName,
     url: "/",
     images: [
       {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "The Vintage Vine — props and set dressing in Cranston, Rhode Island",
+        url: "/canva-original/final-hero.webp",
+        width: 1800,
+        height: 1235,
+        alt: `${siteName} — props and set dressing serving ${serviceArea}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Vintage Vine | Props & Set Dressing",
-    description:
-      "Distinctive finds and hard-to-source details for convincing productions.",
-    images: ["/og.png"],
+    title: `${siteName} | Props & Set Dressing`,
+    description: siteDescription,
+    images: ["/canva-original/final-hero.webp"],
   },
   icons: {
     icon: "/favicon.svg",
@@ -64,9 +82,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-smooth bg-[#f9eaf4] motion-reduce:scroll-auto"
+      className={`${fraunces.variable} ${arimo.variable} ${limelight.variable} ${sacramento.variable} scroll-smooth bg-[#f9eaf4] motion-reduce:scroll-auto`}
     >
-      <body className="m-0 bg-[#f9eaf4] font-['Fraunces',Garamond,Georgia,serif] text-[#242122]">
+      <body className="m-0 bg-[#f9eaf4] font-[family-name:var(--font-fraunces)] text-[#242122]">
         {children}
       </body>
     </html>

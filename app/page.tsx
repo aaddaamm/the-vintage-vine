@@ -1,36 +1,60 @@
 import Image from "next/image";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://the-vintage-vine.vercel.app";
+import {
+  serviceArea,
+  siteDescription,
+  siteName,
+  siteUrl,
+} from "./site";
 
 const businessSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "The Vintage Vine",
-  url: siteUrl,
-  image: `${siteUrl}/canva-original/final-hero.webp`,
-  description:
-    "Prop sourcing and set dressing for film, television, photography, theater, and commercial productions.",
-  telephone: "+1-401-830-2068",
-  email: "TheVintageVinePVD@gmail.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Cranston",
-    addressRegion: "RI",
-    addressCountry: "US",
-  },
-  founder: {
-    "@type": "Person",
-    name: "Niki Robinson",
-  },
-  knowsAbout: [
-    "Prop sourcing",
-    "Set dressing",
-    "Large-scale props",
-    "Period-accurate props",
-    "Vintage objects",
-    "Antiques",
-    "Wardrobe",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: siteName,
+      url: siteUrl,
+      image: `${siteUrl}/canva-original/final-hero.webp`,
+      description: siteDescription,
+      telephone: "+1-401-830-2068",
+      email: "TheVintageVinePVD@gmail.com",
+      areaServed: {
+        "@type": "State",
+        name: serviceArea,
+      },
+      founder: {
+        "@type": "Person",
+        name: "Niki Robinson",
+      },
+      knowsAbout: [
+        "Prop sourcing",
+        "Set dressing",
+        "Large-scale props",
+        "Period-accurate props",
+        "Vintage objects",
+        "Antiques",
+        "Wardrobe",
+      ],
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#prop-sourcing-and-set-dressing`,
+      name: "Prop Sourcing and Set Dressing",
+      serviceType: "Prop sourcing and set dressing",
+      description: siteDescription,
+      provider: {
+        "@id": `${siteUrl}/#organization`,
+      },
+      areaServed: {
+        "@type": "State",
+        name: serviceArea,
+      },
+      audience: {
+        "@type": "Audience",
+        audienceType:
+          "Film, television, photography, theater, and commercial productions",
+      },
+    },
   ],
 };
 
@@ -62,8 +86,8 @@ export default function Home() {
           alt=""
           width={1800}
           height={1235}
+          sizes="(max-width: 1100px) 100vw, 1100px"
           priority
-          unoptimized
         />
 
         <div className="sr-only">
@@ -73,7 +97,7 @@ export default function Home() {
           <p>Cranston, RI</p>
         </div>
 
-        <p className="absolute inset-x-0 bottom-0 m-0 flex h-[10.7%] items-center justify-center bg-[#050505] px-[4%] text-center font-['Fraunces',Garamond,Georgia,serif] text-[3cqw] font-black tracking-[0.015em] text-white uppercase">
+        <p className="absolute inset-x-0 bottom-0 m-0 flex h-[10.7%] items-center justify-center bg-[#050505] px-[4%] text-center font-[family-name:var(--font-fraunces)] text-[3cqw] font-black tracking-[0.015em] text-white uppercase">
           We find the right thing, right on cue
         </p>
       </header>
@@ -110,7 +134,7 @@ export default function Home() {
 
         <div className="absolute inset-0 z-[1]">
           <h2
-            className="absolute top-[4%] left-[2%] m-0 font-['Limelight',sans-serif] text-[13cqw] leading-[0.98] font-normal tracking-[-0.04em] text-white [-webkit-text-stroke:clamp(1px,0.13cqw,2px)_#242122]"
+            className="absolute top-[4%] left-[2%] m-0 font-[family-name:var(--font-limelight)] text-[13cqw] leading-[0.98] font-normal tracking-[-0.04em] text-white [-webkit-text-stroke:clamp(1px,0.13cqw,2px)_#242122]"
             id="story-title"
           >
             Details
@@ -155,10 +179,10 @@ export default function Home() {
           alt=""
           width={1800}
           height={1958}
-          unoptimized
+          sizes="(max-width: 1100px) 100vw, 1100px"
         />
         <div className="absolute top-[11%] left-0 min-h-[59%] w-[78.5%] bg-[#fcecf7] px-[3.5%] py-[5%]">
-          <p className="m-0 mb-[4%] font-['Arimo',Arial,sans-serif] text-[clamp(8px,1.45cqw,26px)] font-bold tracking-[0.24em] uppercase">
+          <p className="m-0 mb-[4%] font-[family-name:var(--font-arimo)] text-[clamp(8px,1.45cqw,26px)] font-bold tracking-[0.24em] uppercase">
             The collection
           </p>
           <h2
@@ -194,11 +218,11 @@ export default function Home() {
           alt="Vintage props including a card catalog, china, bridal shoes, artwork, a wooden barrel, a novelty lamp, a diamond chair, a handbag, and a raffle drum."
           width={1800}
           height={6399}
-          unoptimized
+          sizes="(max-width: 1100px) 100vw, 1100px"
         />
         <div className="absolute top-0 left-0 flex h-[11.5%] w-[58%] items-center bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-[length:170px_145px,210px_175px,190px_165px,155px_135px] px-[4%]">
           <h2
-            className="m-0 rotate-[-7deg] font-['Sacramento',cursive] text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb]"
+            className="m-0 rotate-[-7deg] font-[family-name:var(--font-sacramento)] text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb]"
             id="gallery-title"
           >
             Gallery
@@ -217,7 +241,7 @@ export default function Home() {
           alt=""
           width={1800}
           height={2401}
-          unoptimized
+          sizes="(max-width: 1100px) 100vw, 1100px"
         />
 
         <h2
@@ -226,7 +250,7 @@ export default function Home() {
         >
           {["Lights.", "Camera.", "Action."].map((word) => (
             <span
-              className="block font-['Limelight',sans-serif] text-[17cqw] leading-[0.98] font-normal tracking-[-0.055em] text-white [-webkit-text-stroke:clamp(1px,0.14cqw,2px)_#555]"
+              className="block font-[family-name:var(--font-limelight)] text-[17cqw] leading-[0.98] font-normal tracking-[-0.055em] text-white [-webkit-text-stroke:clamp(1px,0.14cqw,2px)_#555]"
               key={word}
             >
               {word}
