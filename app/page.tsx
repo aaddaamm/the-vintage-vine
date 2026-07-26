@@ -283,13 +283,18 @@ export default function Home() {
         </address>
       </section>
       </main>
-      <footer className="mx-auto w-full max-w-[1100px] border-t border-[#242122]/10 bg-[#f9eaf4] px-5 py-7 text-center">
+      <footer className="mx-auto w-full max-w-225 border-t border-[#242122]/10 bg-[#f9eaf4] px-5 py-7 text-center">
+        <span className="block text-[clamp(8px,1.45cqw,26px)] font-bold text-[#242122]/80">
+          The Vintage Vine &copy; {new Date().getFullYear()}. All rights reserved.
+        </span>
+        built by{" "}
         <a
-          className="inline-flex min-h-12 flex-col items-center justify-center rounded-full px-5 py-2 font-[family-name:var(--font-arimo)] text-sm font-bold tracking-[0.08em] text-[#242122] uppercase underline decoration-[#d95e9b] decoration-2 underline-offset-4 focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#d95e9b]"
-          href="mailto:TheVintageVinePVD@gmail.com"
+          className="font-bold text-[#d95e9b] underline decoration-[#d95e9b]/50 underline-offset-2 transition-colors duration-300 hover:text-[#c94ee7] hover:decoration-[#c94ee7]/50"
+          href="https://www.adamrobinson.tech"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <span className="text-[0.7em] tracking-[0.2em]">Email The Vintage Vine</span>
-          <span className="mt-1 normal-case">TheVintageVinePVD@gmail.com</span>
+          adamrobinson.tech
         </a>
       </footer>
     </>
