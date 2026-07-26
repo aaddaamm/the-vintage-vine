@@ -93,7 +93,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${arimo.variable} ${limelight.variable} ${sacramento.variable} scroll-smooth bg-[#f9eaf4] motion-reduce:scroll-auto`}
     >
       <Analytics />
-      <body className="m-0 bg-[#f9eaf4] font-[family-name:var(--font-fraunces)] text-[#242122]">
+      <body className="m-0 bg-[#f9eaf4] font-(family-name:--font-fraunces) text-[#242122]">
         {children}
       </body>
     </html>

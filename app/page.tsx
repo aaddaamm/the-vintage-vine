@@ -78,7 +78,7 @@ const reelRotations = [
 export default function Home() {
   return (
     <>
-      <main className="mx-auto w-full max-w-[1100px] overflow-clip [container-type:inline-size]">
+      <main className="mx-auto w-full max-w-275 overflow-clip @container">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -107,7 +107,7 @@ export default function Home() {
           <p>Cranston, RI</p>
         </div>
 
-        <p className="absolute inset-x-0 bottom-0 m-0 flex h-[10.7%] items-center justify-center bg-[#050505] px-[4%] text-center font-[family-name:var(--font-fraunces)] text-[3cqw] font-black tracking-[0.015em] text-white uppercase">
+        <p className="absolute inset-x-0 bottom-0 m-0 flex h-[10.7%] items-center justify-center bg-[#050505] px-[4%] text-center `font-(family-name:--font-fraunces) text-[3cqw] font-black tracking-[0.015em] text-white uppercase">
           We find the right thing, right on cue
         </p>
       </header>
@@ -116,7 +116,7 @@ export default function Home() {
         className="bg-[#fff9fc] px-[6%] py-[8%] text-center"
         aria-labelledby="services-title"
       >
-        <p className="m-0 mb-3 font-[family-name:var(--font-arimo)] text-[clamp(0.7rem,1.45cqw,1rem)] font-bold tracking-[0.2em] text-[#6d5864] uppercase">
+        <p className="m-0 mb-3 font-(family-name:--font-arimo) text-[clamp(0.7rem,1.45cqw,1rem)] font-bold tracking-[0.2em] text-[#6d5864] uppercase">
           Cranston, Rhode Island
         </p>
         <h1
@@ -125,7 +125,7 @@ export default function Home() {
         >
           Props &amp; Set Dressing for Film and Television in Rhode Island
         </h1>
-        <p className="mx-auto mt-6 mb-0 max-w-[46rem] text-[clamp(1rem,2.2cqw,1.35rem)] leading-[1.6]">
+        <p className="mx-auto mt-6 mb-0 max-w-184 text-[clamp(1rem,2.2cqw,1.35rem)] leading-[1.6]">
           The Vintage Vine helps film, television, photography, theater, and
           commercial productions find hard-to-find vintage, antique,
           contemporary, and large-scale pieces. From one impossible object to a
@@ -133,7 +133,7 @@ export default function Home() {
           network to find details that fit the story.
         </p>
         <a
-          className="mt-7 inline-flex min-h-11 items-center justify-center rounded-full bg-[#242122] px-7 py-3 font-[family-name:var(--font-arimo)] text-sm font-bold tracking-[0.08em] text-white uppercase no-underline transition-colors duration-300 hover:bg-[#a63f73] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#d95e9b]"
+          className="mt-7 inline-flex min-h-11 items-center justify-center rounded-full bg-[#242122] px-7 py-3 font-(family-name:--font-arimo) text-sm font-bold tracking-[0.08em] text-white uppercase no-underline transition-colors duration-300 hover:bg-[#a63f73] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#d95e9b]"
           href="#contact"
         >
           Start a search
@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
       <section
-        className="relative isolate aspect-[1800/3130] w-full overflow-hidden bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-[length:170px_145px,210px_175px,190px_165px,155px_135px]"
+        className="relative isolate aspect-1800/3130 w-full overflow-hidden bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-size[170px_145px,210px_175px,190px_165px,155px_135px]"
         id="story"
         aria-labelledby="story-title"
       >
@@ -170,9 +170,9 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="absolute inset-0 z-[1]">
+        <div className="absolute inset-0 z-1">
           <h2
-            className="absolute top-[4%] left-[2%] m-0 font-[family-name:var(--font-limelight)] text-[13cqw] leading-[0.98] font-normal tracking-[-0.04em] text-white [-webkit-text-stroke:clamp(1px,0.13cqw,2px)_#242122]"
+            className="absolute top-[4%] left-[2%] m-0 font-(family-name:--font-limelight ) text-[13cqw] leading-[0.98] font-normal tracking-[-0.04em] text-white [-webkit-text-stroke:clamp(1px,0.13cqw,2px)_#242122]"
             id="story-title"
           >
             Details
@@ -220,7 +220,7 @@ export default function Home() {
           sizes="(max-width: 1100px) 100vw, 1100px"
         />
         <div className="absolute top-[11%] left-0 min-h-[59%] w-[78.5%] bg-[#fcecf7] px-[3.5%] py-[5%]">
-          <p className="m-0 mb-[4%] font-[family-name:var(--font-arimo)] text-[clamp(8px,1.45cqw,26px)] font-bold tracking-[0.24em] uppercase">
+          <p className="m-0 mb-[4%] font-(family-name:--font-arimo) text-[clamp(8px,1.45cqw,26px)] font-bold tracking-[0.24em] uppercase">
             The collection
           </p>
           <h2
@@ -231,7 +231,7 @@ export default function Home() {
             <br />
             No stand-ins.
           </h2>
-          <p className="mt-[15%] mr-[12%] mb-0 text-[3.6cqw] leading-[1.5]">
+          <p className="mt-[15%] mr-[12%] mb-0 text-[3.6cqw] leading-normal">
             From a single impossible find to a fully dressed space, each search
             starts with the story you need to tell.
           </p>
@@ -258,7 +258,7 @@ export default function Home() {
           height={6399}
           sizes="(max-width: 1100px) 100vw, 1100px"
         />
-        <div className="absolute top-0 left-0 flex h-[11.5%] w-[58%] items-center bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-[length:170px_145px,210px_175px,190px_165px,155px_135px] px-[4%]">
+        <div className="absolute top-0 left-0 flex h-[11.5%] w-[58%] items-center bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-size[170px_145px,210px_175px,190px_165px,155px_135px] px-[4%]">
           <h2
             className="m-0 rotate-[-7deg] font-(family-name:--font-sacramento) text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb]"
             id="gallery-title"
@@ -312,7 +312,7 @@ export default function Home() {
             401-830-2068
           </a>
           <a
-            className="flex min-h-[1.55em] items-center justify-center bg-[#4c4848] text-center text-[5cqw] leading-none font-black text-white no-underline [font-variation-settings:'SOFT'_100,'WONK'_1] [overflow-wrap:anywhere] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7]"
+            className="flex min-h-[1.55em] items-center justify-center bg-[#4c4848] text-center text-[5cqw] leading-none font-black text-white no-underline [font-variation-settings:'SOFT'_100,'WONK'_1] wrap-anywhere focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7]"
             href="mailto:TheVintageVinePVD@gmail.com"
           >
             TheVintageVinePVD@gmail.com
