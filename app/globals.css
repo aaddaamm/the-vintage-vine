@@ -24,6 +24,9 @@ body {
 }
 
 main {
+  container-type: inline-size;
+  margin: 0 auto;
+  max-width: 1440px;
   overflow: clip;
   width: 100%;
 }
@@ -70,7 +73,7 @@ a {
   color: white;
   display: flex;
   font-family: "Fraunces", Garamond, Georgia, serif;
-  font-size: 3vw;
+  font-size: 3cqw;
   font-weight: 700;
   height: 10.7%;
   justify-content: center;
@@ -126,7 +129,7 @@ a {
 .story h2 {
   color: white;
   font-family: Broadway, "Limelight", sans-serif;
-  font-size: 13vw;
+  font-size: 13cqw;
   font-weight: 400;
   left: 2%;
   letter-spacing: -0.04em;
@@ -134,11 +137,11 @@ a {
   margin: 0;
   position: absolute;
   top: 4%;
-  -webkit-text-stroke: clamp(1px, 0.13vw, 2px) var(--ink);
+  -webkit-text-stroke: clamp(1px, 0.13cqw, 2px) var(--ink);
 }
 
 .storyLead {
-  font-size: 7vw;
+  font-size: 7cqw;
   font-weight: 700;
   left: 9%;
   margin: 0;
@@ -154,16 +157,16 @@ a {
 }
 
 .needs h3 {
-  font-size: 9vw;
+  font-size: 9cqw;
   line-height: 1;
   margin: 0 0 8%;
 }
 
 .needs ul {
   display: grid;
-  font-size: 4.6vw;
+  font-size: 4.6cqw;
   font-weight: 700;
-  gap: 6vw;
+  gap: 6cqw;
   line-height: 1.15;
   list-style: disc;
   margin: 0 0 0 23%;
@@ -171,7 +174,7 @@ a {
 }
 
 .storyBody {
-  font-size: 5.5vw;
+  font-size: 5.5cqw;
   left: 5%;
   line-height: 1.35;
   margin: 0;
@@ -187,7 +190,7 @@ a {
 }
 
 .filmReel {
-  border: clamp(14px, 2.5vw, 44px) solid rgb(198 145 174 / 22%);
+  border: clamp(14px, 2.5cqw, 44px) solid rgb(198 145 174 / 22%);
   border-radius: 50%;
   height: 43%;
   left: -15%;
@@ -198,7 +201,7 @@ a {
 }
 
 .filmReel::before {
-  border: clamp(16px, 2.6vw, 46px) solid rgb(198 145 174 / 18%);
+  border: clamp(16px, 2.6cqw, 46px) solid rgb(198 145 174 / 18%);
   border-radius: 50%;
   content: "";
   inset: 22%;
@@ -245,7 +248,7 @@ a {
 .collectionCard::after {
   color: #d95e9b;
   content: "✦  ✦";
-  font-size: clamp(28px, 7vw, 112px);
+  font-size: clamp(28px, 7cqw, 112px);
   line-height: 1;
   position: absolute;
   right: 3%;
@@ -254,7 +257,7 @@ a {
 
 .eyebrow {
   font-family: "Arimo", Arial, sans-serif;
-  font-size: clamp(8px, 1.45vw, 26px);
+  font-size: clamp(8px, 1.45cqw, 26px);
   font-weight: 700;
   letter-spacing: 0.24em;
   margin: 0 0 4%;
@@ -262,7 +265,7 @@ a {
 }
 
 .collectionCard h2 {
-  font-size: 8vw;
+  font-size: 8cqw;
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 0.9;
@@ -271,7 +274,7 @@ a {
 }
 
 .collectionCard > p:last-child {
-  font-size: 3.6vw;
+  font-size: 3.6cqw;
   line-height: 1.5;
   margin: 15% 12% 0 0;
 }
@@ -290,7 +293,7 @@ a {
 .galleryTitle h2 {
   color: white;
   font-family: "Brush Script MT", "Segoe Script", cursive;
-  font-size: 20vw;
+  font-size: 20cqw;
   font-weight: 400;
   line-height: 1;
   margin: 0;
@@ -313,17 +316,33 @@ a {
   position: absolute;
   top: 0;
   width: 58%;
+  z-index: 1;
 }
 
 .actionWords span {
   color: white;
   display: block;
   font-family: Broadway, "Limelight", sans-serif;
-  font-size: 17vw;
+  font-size: 17cqw;
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 0.98;
-  -webkit-text-stroke: clamp(1px, 0.14vw, 2px) #555;
+  -webkit-text-stroke: clamp(1px, 0.14cqw, 2px) #555;
+}
+
+.contact .sectionArtwork {
+  z-index: 0;
+}
+
+.contact::after {
+  background: url("/canva-original/final-contact.webp") center / 100% 100%
+    no-repeat;
+  clip-path: polygon(0 45%, 100% 30%, 100% 100%, 0 100%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
 }
 
 .contactDetails {
@@ -336,6 +355,7 @@ a {
   position: absolute;
   right: 5%;
   top: 70%;
+  z-index: 3;
 }
 
 .contactDetails strong,
@@ -351,7 +371,7 @@ a {
 .contactDetails strong {
   background: #4e4949;
   color: white;
-  font-size: 12vw;
+  font-size: 12cqw;
   font-weight: 400;
   min-height: 1.2em;
 }
@@ -359,14 +379,14 @@ a {
 .contactDetails a[href^="tel"] {
   background: #050505;
   color: white;
-  font-size: 12.2vw;
+  font-size: 12.2cqw;
   min-height: 1.28em;
 }
 
 .contactDetails a[href^="mailto"] {
   background: #4c4848;
   color: white;
-  font-size: 5vw;
+  font-size: 5cqw;
   font-weight: 700;
   min-height: 1.55em;
   overflow-wrap: anywhere;
@@ -379,48 +399,48 @@ a {
 
 @media (min-width: 701px) {
   .story h2 {
-    font-size: 9vw;
+    font-size: 9cqw;
   }
 
   .storyLead {
-    font-size: 5.8vw;
+    font-size: 5.8cqw;
   }
 
   .needs h3 {
-    font-size: 6.5vw;
+    font-size: 6.5cqw;
   }
 
   .needs ul {
-    font-size: 3.8vw;
-    gap: 4.5vw;
+    font-size: 3.8cqw;
+    gap: 4.5cqw;
   }
 
   .storyBody {
-    font-size: 4vw;
+    font-size: 4cqw;
   }
 
   .collectionCard h2 {
-    font-size: 6.8vw;
+    font-size: 6.8cqw;
   }
 
   .galleryTitle h2 {
-    font-size: 10vw;
+    font-size: 10cqw;
   }
 
   .actionWords span {
-    font-size: 10.5vw;
+    font-size: 10.5cqw;
   }
 
   .contactDetails strong {
-    font-size: 8vw;
+    font-size: 8cqw;
   }
 
   .contactDetails a[href^="tel"] {
-    font-size: 9vw;
+    font-size: 9cqw;
   }
 
   .contactDetails a[href^="mailto"] {
-    font-size: 4.3vw;
+    font-size: 4.3cqw;
   }
 }
 
