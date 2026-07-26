@@ -68,7 +68,8 @@ const reelRotations = [
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-[1100px] overflow-clip [container-type:inline-size]">
+    <>
+      <main className="mx-auto w-full max-w-[1100px] overflow-clip [container-type:inline-size]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -281,6 +282,16 @@ export default function Home() {
           </a>
         </address>
       </section>
-    </main>
+      </main>
+      <footer className="mx-auto w-full max-w-[1100px] border-t border-[#242122]/10 bg-[#f9eaf4] px-5 py-7 text-center">
+        <a
+          className="inline-flex min-h-12 flex-col items-center justify-center rounded-full px-5 py-2 font-[family-name:var(--font-arimo)] text-sm font-bold tracking-[0.08em] text-[#242122] uppercase underline decoration-[#d95e9b] decoration-2 underline-offset-4 focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#d95e9b]"
+          href="mailto:TheVintageVinePVD@gmail.com"
+        >
+          <span className="text-[0.7em] tracking-[0.2em]">Email The Vintage Vine</span>
+          <span className="mt-1 normal-case">TheVintageVinePVD@gmail.com</span>
+        </a>
+      </footer>
+    </>
   );
 }
