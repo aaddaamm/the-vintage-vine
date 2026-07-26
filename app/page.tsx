@@ -79,7 +79,7 @@ export default function Home() {
       </header>
 
       <section
-        className="relative isolate aspect-[1800/3130] w-full overflow-hidden bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_18%_24%,#f2c9e77a_0_7%,transparent_8%),radial-gradient(ellipse_at_73%_18%,#f2c9e761_0_9%,transparent_10%),radial-gradient(ellipse_at_38%_78%,#f2c9e770_0_8%,transparent_9%),radial-gradient(ellipse_at_88%_72%,#f2c9e766_0_7%,transparent_8%)] bg-[length:230px_190px] min-[701px]:aspect-[4/5]"
+        className="relative isolate aspect-[1800/3130] w-full overflow-hidden bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-[length:170px_145px,210px_175px,190px_165px,155px_135px]"
         id="story"
         aria-labelledby="story-title"
       >
@@ -97,28 +97,35 @@ export default function Home() {
         </div>
 
         <div
-          className="absolute inset-x-0 top-[71.5%] h-[7%] opacity-90 [background:linear-gradient(#ffffff9e,#ffffff9e)_center/100%_48%_no-repeat,repeating-linear-gradient(90deg,#f2c9e78c_0_5.5%,transparent_5.5%_9%)] min-[701px]:top-[68%]"
+          className="absolute inset-x-0 top-[71.5%] flex h-[7%] items-center gap-[1.4%] border-y border-[#e8c8dc99] bg-[#fff9fc99] px-[1.2%] opacity-90"
           aria-hidden="true"
-        />
+        >
+          {Array.from({ length: 11 }, (_, index) => (
+            <span
+              className="h-[72%] min-w-0 flex-1 rounded-[12%] border border-[#deb9d180] bg-white/30"
+              key={index}
+            />
+          ))}
+        </div>
 
         <div className="absolute inset-0 z-[1]">
           <h2
-            className="absolute top-[4%] left-[2%] m-0 font-['Limelight',sans-serif] text-[13cqw] leading-[0.98] font-normal tracking-[-0.04em] text-white [-webkit-text-stroke:clamp(1px,0.13cqw,2px)_#242122] min-[701px]:top-[3%] min-[701px]:text-[9cqw]"
+            className="absolute top-[4%] left-[2%] m-0 font-['Limelight',sans-serif] text-[13cqw] leading-[0.98] font-normal tracking-[-0.04em] text-white [-webkit-text-stroke:clamp(1px,0.13cqw,2px)_#242122]"
             id="story-title"
           >
             Details
             <br />
             tell the story.
           </h2>
-          <p className="absolute top-[20.5%] left-[9%] m-0 text-[7cqw] font-bold min-[701px]:top-[18%] min-[701px]:text-[5.8cqw]">
+          <p className="absolute top-[20.5%] left-[9%] m-0 text-[7cqw] font-bold">
             We find the right ones.
           </p>
 
-          <div className="absolute top-[38.5%] right-[3%] left-[2%] min-[701px]:top-[32%]">
-            <h3 className="m-0 mb-[8%] text-[9cqw] leading-none min-[701px]:text-[6.5cqw]">
+          <div className="absolute top-[38.5%] right-[3%] left-[2%]">
+            <h3 className="m-0 mb-[8%] text-[9cqw] leading-none">
               Whether you need…
             </h3>
-            <ul className="ml-[23%] grid list-disc gap-[6cqw] pl-[1.2em] text-[4.6cqw] leading-[1.15] font-bold min-[701px]:gap-[4.5cqw] min-[701px]:text-[3.8cqw]">
+            <ul className="ml-[23%] grid list-disc gap-[6cqw] pl-[1.2em] text-[4.6cqw] leading-[1.15] font-bold">
               <li>a single large scale prop</li>
               <li>period accurate set dressing</li>
               <li>unique character details</li>
@@ -126,7 +133,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <p className="absolute top-[77%] right-[5%] left-[5%] m-0 text-justify text-[5.5cqw] leading-[1.35] min-[701px]:top-[75%] min-[701px]:text-[4cqw]">
+          <p className="absolute top-[77%] right-[5%] left-[5%] m-0 text-justify text-[5.5cqw] leading-[1.35]">
             <strong className="underline underline-offset-[0.1em]">
               The Vintage Vine
             </strong>{" "}
@@ -155,7 +162,7 @@ export default function Home() {
             The collection
           </p>
           <h2
-            className="m-0 text-[8cqw] leading-[0.9] font-normal tracking-[-0.055em] whitespace-nowrap min-[701px]:text-[6.8cqw]"
+            className="m-0 text-[8cqw] leading-[0.9] font-normal tracking-[-0.055em] whitespace-nowrap"
             id="collection-title"
           >
             Plenty of character.
@@ -167,10 +174,11 @@ export default function Home() {
             starts with the story you need to tell.
           </p>
           <span
-            className="absolute top-[62%] right-[3%] text-[clamp(28px,7cqw,112px)] leading-none text-[#d95e9b]"
+            className="absolute top-[57%] right-[3%] flex items-end gap-[0.2cqw] leading-none"
             aria-hidden="true"
           >
-            ✦ ✦
+            <i className="text-[4.2cqw] not-italic text-[#f6c447]">✦</i>
+            <i className="text-[7cqw] not-italic text-[#d95e9b]">✦</i>
           </span>
         </div>
       </section>
@@ -188,9 +196,9 @@ export default function Home() {
           height={6399}
           unoptimized
         />
-        <div className="absolute top-0 left-0 flex h-[11.5%] w-[58%] items-center bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_18%_24%,#f2c9e77a_0_7%,transparent_8%),radial-gradient(ellipse_at_73%_18%,#f2c9e761_0_9%,transparent_10%),radial-gradient(ellipse_at_38%_78%,#f2c9e770_0_8%,transparent_9%),radial-gradient(ellipse_at_88%_72%,#f2c9e766_0_7%,transparent_8%)] bg-[length:230px_190px] px-[4%]">
+        <div className="absolute top-0 left-0 flex h-[11.5%] w-[58%] items-center bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-[length:170px_145px,210px_175px,190px_165px,155px_135px] px-[4%]">
           <h2
-            className="m-0 rotate-[-7deg] font-['Brush_Script_MT','Segoe_Script',cursive] text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb] min-[701px]:text-[10cqw]"
+            className="m-0 rotate-[-7deg] font-['Brush_Script_MT','Segoe_Script',cursive] text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb]"
             id="gallery-title"
           >
             Gallery
@@ -218,7 +226,7 @@ export default function Home() {
         >
           {["Lights.", "Camera.", "Action."].map((word) => (
             <span
-              className="block font-['Limelight',sans-serif] text-[17cqw] leading-[0.98] font-normal tracking-[-0.055em] text-white [-webkit-text-stroke:clamp(1px,0.14cqw,2px)_#555] min-[701px]:text-[10.5cqw]"
+              className="block font-['Limelight',sans-serif] text-[17cqw] leading-[0.98] font-normal tracking-[-0.055em] text-white [-webkit-text-stroke:clamp(1px,0.14cqw,2px)_#555]"
               key={word}
             >
               {word}
@@ -232,17 +240,17 @@ export default function Home() {
         />
 
         <address className="absolute top-[70%] right-[5%] bottom-[0.8%] left-[5%] z-[3] grid grid-rows-[32%_40%_28%] gap-0 not-italic">
-          <strong className="flex min-h-[1.2em] items-center justify-center bg-[#4e4949] text-center text-[12cqw] leading-none font-normal text-white no-underline min-[701px]:text-[8cqw]">
+          <strong className="flex min-h-[1.2em] items-center justify-center bg-[#4e4949] text-center text-[12cqw] leading-none font-normal text-white no-underline">
             Niki Robinson
           </strong>
           <a
-            className="flex min-h-[1.28em] items-center justify-center bg-[#050505] text-center text-[12.2cqw] leading-none text-white no-underline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7] min-[701px]:text-[9cqw]"
+            className="flex min-h-[1.28em] items-center justify-center bg-[#050505] text-center text-[12.2cqw] leading-none text-white no-underline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7]"
             href="tel:+14018302068"
           >
             401-830-2068
           </a>
           <a
-            className="flex min-h-[1.55em] items-center justify-center bg-[#4c4848] text-center text-[5cqw] leading-none font-bold text-white no-underline [overflow-wrap:anywhere] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7] min-[701px]:text-[4.3cqw]"
+            className="flex min-h-[1.55em] items-center justify-center bg-[#4c4848] text-center text-[5cqw] leading-none font-bold text-white no-underline [overflow-wrap:anywhere] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#f2c9e7]"
             href="mailto:TheVintageVinePVD@gmail.com"
           >
             TheVintageVinePVD@gmail.com
