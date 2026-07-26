@@ -222,7 +222,7 @@ export default function Home() {
         />
         <div className="absolute top-0 left-0 flex h-[11.5%] w-[58%] items-center bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-[length:170px_145px,210px_175px,190px_165px,155px_135px] px-[4%]">
           <h2
-            className="m-0 rotate-[-7deg] font-[family-name:var(--font-sacramento)] text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb]"
+            className="m-0 rotate-[-7deg] font-(family-name:--font-sacramento) text-[20cqw] leading-none font-normal text-white [text-shadow:0_0_4px_#c94ee7,0_0_12px_#d95ff2,0_0_28px_#e48bfa] [-webkit-text-stroke:1px_#d863eb]"
             id="gallery-title"
           >
             Gallery
@@ -245,14 +245,12 @@ export default function Home() {
         />
 
         <h2
-          className="absolute top-0 left-0 z-[1] m-0 grid h-[40%] w-[65%] content-center bg-linear-to-r from-[#f7e6f1] to-[#fbf8f9] px-[3%] py-[2.5%]"
+          className="absolute top-0 left-0 z-1 m-0 grid h-[34%] w-[58%] content-center bg-linear-to-r from-[#f7e6f1] to-[#fbf8f9] px-[3%] py-[2.5%]"
           id="contact-title"
         >
           {["Lights.", "Camera.", "Action."].map((word) => (
             <span
-              className={`block font-[family-name:var(--font-limelight)] leading-[0.98] font-normal tracking-[-0.055em] text-white [-webkit-text-stroke:clamp(1px,0.14cqw,2px)_#555] ${
-                word === "Action." ? "text-[16cqw]" : "text-[17cqw]"
-              }`}
+              className="block font-(family-name:--font-limelight) text-[13cqw] leading-[0.98] font-normal tracking-[-0.055em] text-white [-webkit-text-stroke:clamp(1px,0.14cqw,2px)_#555]"
               key={word}
             >
               {word}
@@ -261,11 +259,11 @@ export default function Home() {
         </h2>
 
         <div
-          className="pointer-events-none absolute inset-0 z-[2] bg-[url('/canva-original/final-contact.webp')] bg-[length:100%_100%] bg-center bg-no-repeat [clip-path:polygon(0_55%,100%_40%,100%_100%,0_100%)]"
+          className="pointer-events-none absolute inset-0 z-2 bg-[url('/canva-original/final-contact.webp')] bg-size-[100%_100%] bg-center bg-no-repeat [clip-path:polygon(0_45%,100%_30%,100%_100%,0_100%)]"
           aria-hidden="true"
         />
 
-        <address className="absolute top-[70%] right-[5%] bottom-[0.8%] left-[5%] z-[3] grid grid-rows-[32%_40%_28%] gap-0 not-italic">
+        <address className="absolute top-[70%] right-[5%] bottom-[0.8%] left-[5%] z-3 grid grid-rows-[32%_40%_28%] gap-0 not-italic">
           <strong className="flex min-h-[1.2em] items-center justify-center bg-[#4e4949] text-center text-[12cqw] leading-none font-black text-white no-underline [font-variation-settings:'SOFT'_100,'WONK'_1]">
             Niki Robinson
           </strong>
