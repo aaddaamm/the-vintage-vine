@@ -14,7 +14,8 @@ const businessSchema = {
       "@id": `${siteUrl}/#organization`,
       name: siteName,
       url: siteUrl,
-      image: `${siteUrl}/canva-original/final-hero.webp`,
+      logo: `${siteUrl}/favicon.svg`,
+      image: `${siteUrl}/og.jpg`,
       description: siteDescription,
       telephone: "+1-401-830-2068",
       email: "TheVintageVinePVD@gmail.com",
@@ -25,6 +26,14 @@ const businessSchema = {
       founder: {
         "@type": "Person",
         name: "Niki Robinson",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-401-830-2068",
+        email: "TheVintageVinePVD@gmail.com",
+        contactType: "production inquiries",
+        areaServed: "US-RI",
+        availableLanguage: "English",
       },
       knowsAbout: [
         "Prop sourcing",
@@ -88,12 +97,12 @@ export default function Home() {
           width={1800}
           height={1235}
           sizes="(max-width: 1100px) 100vw, 1100px"
-          priority
+          fetchPriority="high"
+          loading="eager"
         />
 
         <div className="sr-only">
           <p>Props &amp; Set Dressing</p>
-          <h1>The Vintage Vine</h1>
           <p>No. 401-830-2068</p>
           <p>Cranston, RI</p>
         </div>
@@ -102,6 +111,34 @@ export default function Home() {
           We find the right thing, right on cue
         </p>
       </header>
+
+      <section
+        className="bg-[#fff9fc] px-[6%] py-[8%] text-center"
+        aria-labelledby="services-title"
+      >
+        <p className="m-0 mb-3 font-[family-name:var(--font-arimo)] text-[clamp(0.7rem,1.45cqw,1rem)] font-bold tracking-[0.2em] text-[#6d5864] uppercase">
+          Cranston, Rhode Island
+        </p>
+        <h1
+          className="mx-auto my-0 max-w-[16ch] text-[clamp(2rem,5.8cqw,4.5rem)] leading-[1.02] font-black tracking-[-0.045em]"
+          id="services-title"
+        >
+          Props &amp; Set Dressing for Film and Television in Rhode Island
+        </h1>
+        <p className="mx-auto mt-6 mb-0 max-w-[46rem] text-[clamp(1rem,2.2cqw,1.35rem)] leading-[1.6]">
+          The Vintage Vine helps film, television, photography, theater, and
+          commercial productions find hard-to-find vintage, antique,
+          contemporary, and large-scale pieces. From one impossible object to a
+          fully dressed space, Niki Robinson works through a trusted sourcing
+          network to find details that fit the story.
+        </p>
+        <a
+          className="mt-7 inline-flex min-h-11 items-center justify-center rounded-full bg-[#242122] px-7 py-3 font-[family-name:var(--font-arimo)] text-sm font-bold tracking-[0.08em] text-white uppercase no-underline transition-colors duration-300 hover:bg-[#a63f73] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-[#d95e9b]"
+          href="#contact"
+        >
+          Start a search
+        </a>
+      </section>
 
       <section
         className="relative isolate aspect-[1800/3130] w-full overflow-hidden bg-[#f9eaf4] bg-[radial-gradient(ellipse_at_20%_25%,transparent_0_24%,#f2c9e75c_25%_43%,transparent_44%),radial-gradient(ellipse_at_75%_20%,transparent_0_22%,#f2c9e752_23%_42%,transparent_43%),radial-gradient(ellipse_at_35%_78%,transparent_0_25%,#f2c9e757_26%_44%,transparent_45%),radial-gradient(ellipse_at_88%_70%,transparent_0_20%,#f2c9e752_21%_40%,transparent_41%)] bg-[length:170px_145px,210px_175px,190px_165px,155px_135px]"
@@ -289,7 +326,7 @@ export default function Home() {
         </span>
         built by{" "}
         <a
-          className="font-bold text-[#d95e9b] underline decoration-[#d95e9b]/50 underline-offset-2 transition-colors duration-300 hover:text-[#c94ee7] hover:decoration-[#c94ee7]/50"
+          className="font-bold text-[#a63f73] underline decoration-[#a63f73]/50 underline-offset-2 transition-colors duration-300 hover:text-[#8f305f] hover:decoration-[#8f305f]/50"
           href="https://www.adamrobinson.tech"
           target="_blank"
           rel="noopener noreferrer"

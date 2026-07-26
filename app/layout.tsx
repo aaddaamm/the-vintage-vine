@@ -24,6 +24,7 @@ const arimo = Arimo({
 const limelight = Limelight({
   subsets: ["latin"],
   display: "swap",
+  preload: false,
   variable: "--font-limelight",
   weight: "400",
 });
@@ -31,6 +32,7 @@ const limelight = Limelight({
 const sacramento = Sacramento({
   subsets: ["latin"],
   display: "swap",
+  preload: false,
   variable: "--font-sacramento",
   weight: "400",
 });
@@ -55,9 +57,9 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/canva-original/final-hero.webp",
-        width: 1800,
-        height: 1235,
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
         alt: `${siteName} — props and set dressing serving ${serviceArea}`,
       },
     ],
@@ -66,7 +68,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteName} | Props & Set Dressing`,
     description: siteDescription,
-    images: ["/canva-original/final-hero.webp"],
+    images: [
+      {
+        url: "/og.jpg",
+        alt: `${siteName} — props and set dressing serving ${serviceArea}`,
+      },
+    ],
   },
   icons: {
     icon: "/favicon.svg",
