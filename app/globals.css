@@ -70,7 +70,7 @@ a {
   color: white;
   display: flex;
   font-family: "Fraunces", Garamond, Georgia, serif;
-  font-size: clamp(11px, 2.65vw, 48px);
+  font-size: 3vw;
   font-weight: 700;
   height: 10.7%;
   justify-content: center;
@@ -126,58 +126,59 @@ a {
 .story h2 {
   color: white;
   font-family: Broadway, "Limelight", sans-serif;
-  font-size: clamp(34px, 8.8vw, 158px);
+  font-size: 13vw;
   font-weight: 400;
   left: 2%;
   letter-spacing: -0.04em;
   line-height: 0.98;
   margin: 0;
   position: absolute;
-  top: 3%;
+  top: 4%;
   -webkit-text-stroke: clamp(1px, 0.13vw, 2px) var(--ink);
 }
 
 .storyLead {
-  font-size: clamp(17px, 4vw, 72px);
+  font-size: 7vw;
   font-weight: 700;
   left: 9%;
   margin: 0;
   position: absolute;
-  top: 19.5%;
+  top: 20.5%;
 }
 
 .needs {
   left: 2%;
   position: absolute;
   right: 3%;
-  top: 38%;
+  top: 38.5%;
 }
 
 .needs h3 {
-  font-size: clamp(20px, 4.4vw, 79px);
+  font-size: 9vw;
   line-height: 1;
-  margin: 0 0 5%;
+  margin: 0 0 8%;
 }
 
 .needs ul {
   display: grid;
-  font-size: clamp(14px, 3.05vw, 55px);
+  font-size: 4.6vw;
   font-weight: 700;
-  gap: 2.6vw;
+  gap: 6vw;
   line-height: 1.15;
+  list-style: disc;
   margin: 0 0 0 23%;
   padding-left: 1.2em;
 }
 
 .storyBody {
-  font-size: clamp(15px, 3.05vw, 55px);
+  font-size: 5.5vw;
   left: 5%;
   line-height: 1.35;
   margin: 0;
   position: absolute;
   right: 5%;
   text-align: justify;
-  top: 79.5%;
+  top: 77%;
 }
 
 .storyBody strong {
@@ -261,17 +262,18 @@ a {
 }
 
 .collectionCard h2 {
-  font-size: clamp(31px, 6.8vw, 122px);
+  font-size: 8vw;
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 0.9;
   margin: 0;
+  white-space: nowrap;
 }
 
 .collectionCard > p:last-child {
-  font-size: clamp(13px, 2.3vw, 41px);
+  font-size: 3.6vw;
   line-height: 1.5;
-  margin: 11% 21% 0 0;
+  margin: 15% 12% 0 0;
 }
 
 .galleryTitle {
@@ -288,7 +290,7 @@ a {
 .galleryTitle h2 {
   color: white;
   font-family: "Brush Script MT", "Segoe Script", cursive;
-  font-size: clamp(48px, 10vw, 180px);
+  font-size: 20vw;
   font-weight: 400;
   line-height: 1;
   margin: 0;
@@ -317,7 +319,7 @@ a {
   color: white;
   display: block;
   font-family: Broadway, "Limelight", sans-serif;
-  font-size: clamp(37px, 10.2vw, 184px);
+  font-size: 17vw;
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 0.98;
@@ -349,7 +351,7 @@ a {
 .contactDetails strong {
   background: #4e4949;
   color: white;
-  font-size: clamp(29px, 7.5vw, 135px);
+  font-size: 12vw;
   font-weight: 400;
   min-height: 1.2em;
 }
@@ -357,14 +359,14 @@ a {
 .contactDetails a[href^="tel"] {
   background: #050505;
   color: white;
-  font-size: clamp(33px, 8.8vw, 158px);
+  font-size: 12.2vw;
   min-height: 1.28em;
 }
 
 .contactDetails a[href^="mailto"] {
   background: #4c4848;
   color: white;
-  font-size: clamp(14px, 4.25vw, 76px);
+  font-size: 5vw;
   font-weight: 700;
   min-height: 1.55em;
   overflow-wrap: anywhere;
@@ -373,6 +375,53 @@ a {
 .contactDetails a:focus-visible {
   outline: 4px solid var(--pink);
   outline-offset: 4px;
+}
+
+@media (min-width: 701px) {
+  .story h2 {
+    font-size: 9vw;
+  }
+
+  .storyLead {
+    font-size: 5.8vw;
+  }
+
+  .needs h3 {
+    font-size: 6.5vw;
+  }
+
+  .needs ul {
+    font-size: 3.8vw;
+    gap: 4.5vw;
+  }
+
+  .storyBody {
+    font-size: 4vw;
+  }
+
+  .collectionCard h2 {
+    font-size: 6.8vw;
+  }
+
+  .galleryTitle h2 {
+    font-size: 10vw;
+  }
+
+  .actionWords span {
+    font-size: 10.5vw;
+  }
+
+  .contactDetails strong {
+    font-size: 8vw;
+  }
+
+  .contactDetails a[href^="tel"] {
+    font-size: 9vw;
+  }
+
+  .contactDetails a[href^="mailto"] {
+    font-size: 4.3vw;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

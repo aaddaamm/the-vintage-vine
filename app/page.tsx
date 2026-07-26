@@ -65,7 +65,7 @@ export default function Home() {
         <p className="heroTagline">We find the right thing, right on cue</p>
       </header>
 
-      <section className="story" aria-labelledby="story-title">
+      <section className="story" id="story" aria-labelledby="story-title">
         <div className="filmReel" aria-hidden="true">
           <span />
           <span />
@@ -100,7 +100,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="collection" aria-labelledby="collection-title">
+      <section
+        className="collection"
+        id="collection"
+        aria-labelledby="collection-title"
+      >
         <Image
           className="sectionArtwork"
           src="/canva-original/final-collection.webp"
@@ -123,7 +127,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="gallery" aria-labelledby="gallery-title">
+      <section className="gallery" id="gallery" aria-labelledby="gallery-title">
         <Image
           className="sectionArtwork"
           src="/canva-original/final-gallery.webp"
